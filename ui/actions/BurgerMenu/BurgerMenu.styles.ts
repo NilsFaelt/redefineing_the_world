@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import Theme from "../../styles/Theme";
+import Theme from "../../../styles/Theme";
 
 interface Props {
   animate: boolean;

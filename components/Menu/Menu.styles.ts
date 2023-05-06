@@ -15,10 +15,15 @@ const open = keyframes`
   }
 `;
 const close = keyframes`
-  from {
+  0% {
     height: 100vh;
+    opacity: 1;
   }
-  to {
+  99% {
+    height: 100vh;
+    opacity: 0;
+  }
+  100%{
     height: 0vh;
   }
 `;
@@ -40,8 +45,14 @@ const closeLink = keyframes`
   50% {
     opacity: 0;
   }
+  95% {
+    opacity: 0;
+    margin-top:0
+  }
   100% {
     opacity: 0;
+    margin-top:-50rem
+    
   }
 `;
 

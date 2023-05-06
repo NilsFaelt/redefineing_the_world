@@ -12,7 +12,7 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
   };
   return (
     <Container animate={toogleMenu}>
-      <Title animate={toogleMenu}>{linkText}</Title>
+      {/* <Title animate={toogleMenu}>{linkText}</Title> */}
       <LinkStyledComponent
         onClick={() => {
           setToogleDropDownMenu(false);
@@ -69,9 +69,9 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
           onHoover("");
         }}
         animate={toogleMenu}
-        href={"/"}
+        href={"/ask-me"}
       >
-        LIFE
+        ASK ME
       </LinkStyledComponent>
     </Container>
   );
