@@ -4,7 +4,7 @@ Link;
 import { Theme } from "../../styles";
 
 interface Props {
-  animate: boolean;
+  animate: string;
 }
 const open = keyframes`
   from {
@@ -61,7 +61,7 @@ export const Title = styled.h3<Props>`
   position: absolute;
   font-weihgt: thin;
   top: 4rem;
-  opacity: ${(props) => (props.animate ? 1 : 0)};
+  opacity: ${(props) => (props.animate === "true" ? 1 : 0)};
 `;
 
 export const LinkStyledComponent = styled(Link)<Props>`
@@ -73,13 +73,12 @@ export const LinkStyledComponent = styled(Link)<Props>`
   font-size: 1.2rem;
   color: black;
   &:hover {
+    border-bottom: ${Theme.width.borders} solid black;
     transition: box-shadow 0.5s;
-    background-color: black;
-    color: white;
   }
 
   animation: ${(props) =>
-    props.animate
+    props.animate === "true"
       ? css`
           ${openLink} 1s forwards
         `
@@ -102,8 +101,9 @@ export const Container = styled.nav<Props>`
   height: 0vh;
   background-color: white;
   border-radius: 0.5rem;
+  border-bottom: ${Theme.width.borders} solid black;
   animation: ${(props) =>
-    props.animate
+    props.animate === "true"
       ? css`
           ${open} 1s forwards
         `

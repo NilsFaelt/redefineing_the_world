@@ -11,8 +11,8 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
     setlinkText(text);
   };
   return (
-    <Container animate={toogleMenu}>
-      {/* <Title animate={toogleMenu}>{linkText}</Title> */}
+    <Container animate={toogleMenu ? "true" : "false"}>
+      {/* <Title animate={toogleMenu? 'true':'false'} >{linkText}</Title> */}
       <LinkStyledComponent
         onClick={() => {
           setToogleDropDownMenu(false);
@@ -23,7 +23,7 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         onMouseLeave={() => {
           onHoover("");
         }}
-        animate={toogleMenu}
+        animate={toogleMenu ? "true" : "false"}
         href={"/"}
       >
         HOME
@@ -38,7 +38,7 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         onMouseLeave={() => {
           onHoover("");
         }}
-        animate={toogleMenu}
+        animate={toogleMenu ? "true" : "false"}
         href={"/"}
       >
         ABOUT
@@ -53,7 +53,7 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         onMouseLeave={() => {
           onHoover("");
         }}
-        animate={toogleMenu}
+        animate={toogleMenu ? "true" : "false"}
         href={"/"}
       >
         CONTACT
@@ -68,7 +68,7 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         onMouseLeave={() => {
           onHoover("");
         }}
-        animate={toogleMenu}
+        animate={toogleMenu ? "true" : "false"}
         href={"/ask-me"}
       >
         ASK ME
