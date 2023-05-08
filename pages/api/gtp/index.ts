@@ -14,7 +14,10 @@ export default async function handler(
     if (!isApiKey.success) {
       res.status(404).json({ error: "Invalid API key" });
     } else {
-      const response = await fetchQuestionToGtp(req.body, isApiKey.data);
+      const response = await fetchQuestionToGtp(
+        req.body.question,
+        isApiKey.data
+      );
       res.json(response);
     }
   } else {

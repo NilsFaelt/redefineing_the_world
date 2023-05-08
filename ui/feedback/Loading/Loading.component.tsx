@@ -5,23 +5,13 @@ export const Loading: FC<{
   size?: "small" | "normal" | "large";
   loading?: boolean;
 }> = ({ size = "normal", loading = true }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(8);
   const [renderedText, setRenderedText] = useState<string[]>([]);
-  const textToRender = [
-    "",
-    "",
-    "L",
-    "O",
-    "A",
-    "D",
-    "I",
-    "N",
-    "G",
-    ".",
-    ".",
-    ".",
-  ];
+  const textToRender = ["O", "A", "D", "I", "N", "G", ".", ".", "."];
 
+  useEffect(() => {
+    setRenderedText(["", "", "L", "O", "A", "D", "I", "N", "G", ".", "."]);
+  }, []);
   useEffect(() => {
     if (count < textToRender.length + 2) {
       setTimeout(() => {
@@ -31,7 +21,7 @@ export const Loading: FC<{
     }
     if (loading && count === textToRender.length + 2) {
       setCount(0);
-      setRenderedText(["", "", "I", "M", " "]);
+      setRenderedText(["L"]);
     }
   }, [renderedText]);
   if (!loading) return null;

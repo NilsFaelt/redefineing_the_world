@@ -1,25 +1,34 @@
 export const fetchQuestionToGtp = async (question: string, key: string) => {
   const questionRules = {
-    answerStyle: "asnwer in the style of dalai lama",
-    answerLength: "answer in 100 word",
+    role: "system",
+    content: "answer in the style of dalai lama",
   };
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
       Authorization: `Bearer ${key}`,
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
-      prompt: `Question: ${question} ${questionRules.answerStyle} ${questionRules.answerLength}\nAnswer:`,
+      messages: [
+        questionRules,
+        {
+          role: "user",
+          content: question,
+        },
+      ],
+
       max_tokens: 100,
       temperature: 0.7,
-      n: 1,
-      stop: ["\n"],
+      // n: 1,
+      // stop: ["\n"],
     }),
-  });
-
-  if (!response.ok) throw new Error("bad response");
-
-  return { response };
+  })
+    .then((data) => data.json())
+    .catch((err) => {
+      console.log(err);
+    });
+  console.log(response, "in here boroter");
+  return response;
 };

@@ -7,7 +7,7 @@ import { Container } from "./AskMeView.css";
 export const AskMeView: FC = () => {
   return (
     <Container>
-      <TitleLetterByLetter size='small' text='HOW CAN I HELP YOU' />
+      <TitleLetterByLetter size='small' text='HOW CAN I HELP YOU?' />
       <AskChatGtp />
     </Container>
   );
