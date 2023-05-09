@@ -6,7 +6,7 @@ export const Container = styled.div`
   background-color: black;
   color: white;
   margin-top: 3rem;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   height: auto;
   padding: 2rem;
   border: ${Theme.width.borders} solid black;

@@ -1,15 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 0rem;
   padding-top: 5rem;
-  min-height: 100rem;
+  padding-bottom: 15rem;
 `;
 export const ParallaxContainer = styled.main`
-  margin-top: 10rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  position: relative;
+  margin-top: 3rem;
   width: 100%;
-  height: 20rem;
 `;
