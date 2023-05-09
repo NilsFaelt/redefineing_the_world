@@ -101,14 +101,15 @@ export const Container = styled.nav<Props>`
   height: 0vh;
   background-color: white;
   border-radius: 0.5rem;
+  box-shadow: 10px 10px 10px;
   border-bottom: ${Theme.width.borders} solid black;
   animation: ${(props) =>
     props.animate === "true"
       ? css`
-          ${open} 1s forwards
+          ${open} 2s forwards
         `
       : css`
-          ${close} 1s forwards
+          ${close} 2s forwards
         `};
   animation-fill-mode: forwards;
 `;
