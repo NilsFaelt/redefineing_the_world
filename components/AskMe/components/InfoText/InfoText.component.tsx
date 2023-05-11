@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { TitleLetterByLetter } from "../../../../ui/feedback";
-import { Container } from "./InfoText.css";
+import { Container, Text } from "./InfoText.css";
 
 export const InfoText: FC<{ text: string; title: string }> = ({
   text,
@@ -10,7 +10,7 @@ export const InfoText: FC<{ text: string; title: string }> = ({
   return (
     <Container>
       <TitleLetterByLetter size='small' text={title} />
-      {text}
+      <Text> {text}</Text>
     </Container>
   );
 };

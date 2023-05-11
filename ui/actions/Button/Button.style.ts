@@ -7,20 +7,15 @@ export const ButtonContainer = styled.button`
   height: 3.2rem;
   background-color: white;
   cursor: pointer;
+  box-shadow: ${Theme.shadow} black;
   &:hover {
-    transition: box-shadow 0.5s ease;
-    box-shadow: ${Theme.shadow} black;
-    background-image: linear-gradient(to right, black, black);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    color: black;
   }
   &:not(:hover) {
   }
 
   transition: box-shadow 0.3s ease;
   &:active {
-    background-color: white;
+    border: none;
     box-shadow: none;
     color: black;
   }

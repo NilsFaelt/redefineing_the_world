@@ -1,8 +1,13 @@
-import styled from "styled-components";
-
+import styled, { css } from "styled-components";
+import { DeviceQuery } from "../../../styles";
 export const Title = styled.h2`
   max-width: 20rem;
   word-wrap: normal;
+  ${css`
+    @media (max-width: ${DeviceQuery.mobile}px) {
+      margin: 1rem;
+    }
+  `}
 
   &.small {
     font-size: 1rem;

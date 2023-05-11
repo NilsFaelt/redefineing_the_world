@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Theme } from "../../../../styles";
+import { DeviceQuery } from "../../../../styles";
 
 export const Container = styled.div`
   width: clamp(20rem, 50%, 30rem);
@@ -10,4 +11,18 @@ export const Container = styled.div`
   height: auto;
   padding: 2rem;
   border: ${Theme.width.borders} solid black;
+  ${css`
+    @media (max-width: ${DeviceQuery.mobile}px) {
+      width: 100%;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+  `}
+`;
+export const Text = styled.div`
+  ${css`
+    @media (max-width: ${DeviceQuery.mobile}px) {
+      margin: 1rem;
+    }
+  `}
 `;

@@ -10,10 +10,6 @@ export const HomeView = () => {
     <Container>
       <TitleLetterByLetter text='WE DEFINE THE WORLD' />
       <EmergingBoxWithText text='THRU TECH AND PASION' />
-      <InfoText
-        title='WHAT WE DO'
-        text='We create your dream with passion for tech and styling. Technology can connect and empower people, while styling inspires and uplifts. Together, we harmoniously blend these passions to bring your vision to life. Our commitment and dedication are infused into every keystroke and brushstroke.'
-      />
       <ParallaxContainer>
         <Parallax
           blur={{ min: -15, max: 15 }}
@@ -25,6 +21,10 @@ export const HomeView = () => {
           style={{ height: "10rem" }}
         ></Parallax>
       </ParallaxContainer>
+      <InfoText
+        title='WHAT WE DO'
+        text='We create your dream with passion for tech and styling. Technology can connect and empower people, while styling inspires and uplifts. Together, we harmoniously blend these passions to bring your vision to life. Our commitment and dedication are infused into every keystroke and brushstroke.'
+      />
     </Container>
   );
 };
