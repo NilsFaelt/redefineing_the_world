@@ -15,7 +15,6 @@ export const ButtonContainer = styled.button`
 
   transition: box-shadow 0.3s ease;
   &:active {
-    border: none;
     box-shadow: none;
     color: black;
   }
