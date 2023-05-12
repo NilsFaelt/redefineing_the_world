@@ -53,10 +53,6 @@ export const AskChatGtp = () => {
       <TextContainer>
         <Text>{gtpAnswer}</Text>
       </TextContainer>
-      <InfoText
-        title='WE STAND AT THE CROSSROADS'
-        text='We are at a pivotal moment in history where technology is rapidly advancing, paving the way for a new era of change. The integration of artificial intelligence, big data, robotics, and the internet of things is revolutionizing the way we live, work, and communicate. While this technological progress brings immense benefits, it also poses significant challenges, from job displacement and income inequality to ethical concerns and security risks. We must embrace these advancements while ensuring they are developed and implemented in ways that promote sustainability, equity, and social justice. With that said try out any question you like to a AI in the style of Dalai Lama'
-      />
     </Container>
   );
 };

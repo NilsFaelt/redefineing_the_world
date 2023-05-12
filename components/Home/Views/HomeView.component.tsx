@@ -1,6 +1,11 @@
 import React from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
-import { Container, ParallaxContainer } from "./HomeView.style";
+import {
+  Container,
+  ParallaxContainer,
+  TextContainer,
+  Text,
+} from "./HomeView.style";
 import { Parallax } from "react-parallax";
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { EmergingBoxWithText } from "../../../ui/Extras";
@@ -8,8 +13,13 @@ import { EmergingBoxWithText } from "../../../ui/Extras";
 export const HomeView = () => {
   return (
     <Container>
-      <TitleLetterByLetter text='WE DEFINE THE WORLD' />
-      <EmergingBoxWithText text='THRU TECH AND PASION' />
+      <TitleLetterByLetter text='FANGO TECH' />
+      <EmergingBoxWithText text='INOVATION AND DESIGN' />
+      <InfoText
+        title='WHAT WE DO'
+        text='
+        Our fervor lies in crafting novel designs and technology that push the boundaries of creativity. Our aim is to bring your aspirations to fruition with a combination of our passion for technology and flair for styling. By merging these two elements, we strive to connect people and elevate them through our work. We imbue every keystroke and brushstroke with our unwavering commitment and dedication to realizing your vision'
+      />
       <ParallaxContainer>
         <Parallax
           blur={{ min: -15, max: 15 }}
@@ -21,10 +31,19 @@ export const HomeView = () => {
           style={{ height: "10rem" }}
         ></Parallax>
       </ParallaxContainer>
-      <InfoText
-        title='WHAT WE DO'
-        text='We create your dream with passion for tech and styling. Technology can connect and empower people, while styling inspires and uplifts. Together, we harmoniously blend these passions to bring your vision to life. Our commitment and dedication are infused into every keystroke and brushstroke.'
-      />
+      <TextContainer>
+        <TitleLetterByLetter size='small' text='THE JOURNEY' />
+        <Text>
+          As a developer, my journey has been defined by an unwavering passion
+          for creating exceptional experiences. With a focus on popular
+          frameworks such as React, Next.js, Nest, Postgres, MongoDB, and more,
+          Im open to crafting anything on your behalf. I want to work as closely
+          as possible with you to bring your dreams and goals to life without
+          any unnecessary detours. Trust me to stay the course and stay true to
+          your vision, as I apply my skills and expertise to create something
+          truly remarkable.
+        </Text>
+      </TextContainer>
     </Container>
   );
 };

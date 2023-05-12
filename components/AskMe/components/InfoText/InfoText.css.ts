@@ -6,7 +6,7 @@ export const Container = styled.div`
   width: clamp(20rem, 50%, 30rem);
   background-color: black;
   color: white;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 3rem;
   height: auto;
   padding: 2rem;
@@ -20,6 +20,7 @@ export const Container = styled.div`
   `}
 `;
 export const Text = styled.div`
+  font-size: 0.9rem;
   ${css`
     @media (max-width: ${DeviceQuery.mobile}px) {
       margin: 1rem;

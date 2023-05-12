@@ -73,6 +73,21 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
       >
         ASK ME
       </LinkStyledComponent>
+      <LinkStyledComponent
+        onClick={() => {
+          setToogleDropDownMenu(false);
+        }}
+        onMouseOver={() => {
+          onHoover("LIFE");
+        }}
+        onMouseLeave={() => {
+          onHoover("");
+        }}
+        animate={toogleMenu ? "true" : "false"}
+        href={"/your-project"}
+      >
+        YOUR PROJECT
+      </LinkStyledComponent>
     </Container>
   );
 };

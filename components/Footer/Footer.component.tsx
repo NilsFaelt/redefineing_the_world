@@ -1,6 +1,14 @@
 import React, { FC } from "react";
-import { Container, Image } from "./Footer.style";
+import { Container, Text, TextContainer } from "./Footer.style";
 
 export const Footer: FC = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <TextContainer>
+        <Text>ABOUT</Text>
+        <Text>FANGO TECH</Text>
+        <Text>CONTACT</Text>
+      </TextContainer>
+    </Container>
+  );
 };
