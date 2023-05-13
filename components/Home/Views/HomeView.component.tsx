@@ -73,7 +73,6 @@ export const HomeView = () => {
             ></Parallax>
           </SmallParallaxContainer>
           <SecondBlackTitle>
-            {" "}
             AS A DEVELOPER, MY JOURNEY HAS BEEN DEFINED BY AN UNWAVERING PASSION
             FOR CREATING EXCEPTIONAL EXPERIENCES. WITH A FOCUS ON POPULAR
             FRAMEWORKS SUCH AS REACT, NEXT.JS, NEST, POSTGRES, MONGODB, AND
