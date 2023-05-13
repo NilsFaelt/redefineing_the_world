@@ -10,20 +10,15 @@ export const Container = styled.div`
   margin-bottom: 3rem;
   height: auto;
   padding: 2rem;
+
   border: ${Theme.width.borders} solid black;
-  ${css`
-    @media (max-width: ${DeviceQuery.mobile}px) {
-      width: 100%;
-      padding-left: 0rem;
-      padding-right: 0rem;
-    }
-  `}
+  @media (max-width: 1024px) {
+    box-sizing: border-box;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+  }
 `;
-export const Text = styled.div`
+export const Text = styled.h2`
   font-size: 0.9rem;
-  ${css`
-    @media (max-width: ${DeviceQuery.mobile}px) {
-      margin: 1rem;
-    }
-  `}
 `;

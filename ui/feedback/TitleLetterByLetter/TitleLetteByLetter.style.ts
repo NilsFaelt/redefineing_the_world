@@ -3,13 +3,14 @@ import { DeviceQuery } from "../../../styles";
 export const Title = styled.h2`
   max-width: 20rem;
   word-wrap: normal;
+  color: ${(props) => {
+    return props.color;
+  }};
   ${css`
     @media (max-width: ${DeviceQuery.mobile}px) {
       margin: 1rem;
     }
-  `}
-
-  &.small {
+  `} &.small {
     font-size: 1rem;
   }
   &.normal {

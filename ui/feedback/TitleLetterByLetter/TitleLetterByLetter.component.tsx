@@ -4,11 +4,13 @@ import { Title } from "./TitleLetteByLetter.style";
 interface Props {
   text?: string;
   size?: "small" | "normal" | "large";
+  color?: "white" | "black";
 }
 
 export const TitleLetterByLetter: FC<Props> = ({
   text = "HELLO",
   size = "normal",
+  color = "black",
 }) => {
   const [count, setCount] = useState(0);
   const [renderedText, setRenderedText] = useState<string[]>([]);
@@ -23,5 +25,9 @@ export const TitleLetterByLetter: FC<Props> = ({
       }, 100);
     }
   }, [renderedText]);
-  return <Title className={size}>{renderedText}</Title>;
+  return (
+    <Title color={color} className={size}>
+      {renderedText}
+    </Title>
+  );
 };

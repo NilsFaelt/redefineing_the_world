@@ -12,7 +12,7 @@ export const AskMeView: FC = () => {
       <AskChatGtp />
       <InfoText
         title='WE STAND AT THE CROSSROADS'
-        text='We are at a pivotal moment in history where technology is rapidly advancing, paving the way for a new era of change. The integration of artificial intelligence, big data, robotics, and the internet of things is revolutionizing the way we live, work, and communicate. While this technological progress brings immense benefits, it also poses significant challenges, from job displacement and income inequality to ethical concerns and security risks. We must embrace these advancements while ensuring they are developed and implemented in ways that promote sustainability, equity, and social justice. With that said try out any question you like to a AI in the style of Dalai Lama'
+        text='WERE AT A CRUX IN THE RAPIDLY CHANGING TECHNOLOGICAL LANDSCAPE. IT CAN BE OVERWHELMING TO NAVIGATE THE NEW TOOLS AND PLATFORMS THAT SEEM TO POP UP DAILY. BUT FEAR NOT, WERE HERE TO HELP. ASK US ANYTHING ABOUT THE EVER-EVOLVING TECH SPACE AND WELL DO OUR BEST TO GUIDE YOU IN THE RIGHT DIRECTION. LETS EMBRACE THIS CROSSROAD TOGETHER AND MAKE THE MOST OF THE TECHNOLOGICAL OPPORTUNITIES AT HAND'
       />
     </Container>
   );
