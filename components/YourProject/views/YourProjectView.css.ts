@@ -9,13 +9,16 @@ export const Container = styled.div`
   gap: 2rem;
   padding-top: 5rem;
 `;
+export const TextContainerBlack = styled.div`
+  max-width: 30rem;
+`;
 export const TextContainer = styled.div`
-  width: clamp(20rem, 50%, 30rem);
   background-color: white;
-  color:black,
-  color: white;
+  color: black;
+  max-width: 30rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
+  box-sizing: border-box;
   height: auto;
   padding: 2rem;
   border: ${Theme.width.borders} solid black;

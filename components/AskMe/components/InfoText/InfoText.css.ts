@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { Theme } from "../../../../styles";
-import { DeviceQuery } from "../../../../styles";
 
 export const Container = styled.div`
   width: clamp(20rem, 50%, 30rem);
@@ -10,13 +9,13 @@ export const Container = styled.div`
   margin-bottom: 3rem;
   height: auto;
   padding: 2rem;
-
+  box-sizing: border-box;
+  width: 100%;
   border: ${Theme.width.borders} solid black;
   @media (max-width: 1024px) {
     box-sizing: border-box;
     padding-left: 2rem;
     padding-right: 2rem;
-    width: 100%;
   }
 `;
 export const Text = styled.h2`

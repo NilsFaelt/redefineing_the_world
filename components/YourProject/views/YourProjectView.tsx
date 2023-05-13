@@ -1,9 +1,13 @@
 import React, { FC } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
-
 import { AskChatGtp } from "../../AskMe/components";
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
-import { Container, TextContainer, Text } from "./YourProjectView.css";
+import {
+  Container,
+  TextContainerBlack,
+  TextContainer,
+  Text,
+} from "./YourProjectView.css";
 
 export const YourProjectView: FC = () => {
   return (
@@ -22,10 +26,12 @@ export const YourProjectView: FC = () => {
       </TextContainer>
       <TitleLetterByLetter size='small' text='PLEASE ASK ME' />
       <AskChatGtp />
-      <InfoText
-        title='MY GOAL TO YOU'
-        text='Transparency is at the heart of my approach to client communication. I provide daily updates and keep you in the loop every step of the way, so you always know exactly where we stand. No surprises, no hidden agendas—just honest, open communication. While other companies may shy away from showing their cards, I believe that transparency is essential to building a strong, trusting relationship with my clients, and to delivering a final product that exceeds expectations.'
-      />
+      <TextContainerBlack>
+        <InfoText
+          title='MY GOAL TO YOU'
+          text='Transparency is at the heart of my approach to client communication. I provide daily updates and keep you in the loop every step of the way, so you always know exactly where we stand. No surprises, no hidden agendas—just honest, open communication. While other companies may shy away from showing their cards, I believe that transparency is essential to building a strong, trusting relationship with my clients, and to delivering a final product that exceeds expectations.'
+        />
+      </TextContainerBlack>
     </Container>
   );
 };
