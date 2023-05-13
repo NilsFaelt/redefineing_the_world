@@ -17,6 +17,10 @@ export const BlackInfoContainer = styled.main`
 export const TitleContainer = styled.div`
   margin-left: 8rem;
   margin-top: 0rem;
+  @media (max-width: 600px) {
+    margin-left: 3rem;
+    padding: 2rem;
+  }
 `;
 
 export const BlackTextInfoContainer = styled.h2`
@@ -107,6 +111,9 @@ export const SmallParallaxContainer = styled.main`
   margin-right: 7rem;
   margin-top: 4rem;
   margin-bottom: 3rem;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const Text = styled.h2`

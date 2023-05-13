@@ -9,7 +9,7 @@ export const Container = styled.header`
 `;
 export const TitleWrapper = styled.header`
   padding-top: 1rem;
-  margin-left: 9rem;
+  margin-left: 2rem;
   text-decoration: underline 1px;
 `;
 export const LinkStyle = styled(Link)`
