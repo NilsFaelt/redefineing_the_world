@@ -104,7 +104,7 @@ export const ParallaxContainer = styled.main`
   border-bottom: 1px solid black;
   position: relative;
   margin-top: 5rem;
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
   width: 100%;
 `;
 export const SmallParallaxContainer = styled.main`
@@ -114,6 +114,22 @@ export const SmallParallaxContainer = styled.main`
   @media (max-width: 1024px) {
     width: 100%;
   }
+`;
+export const Underline = styled.hr`
+  bottom: 0rem;
+  margin-right: 7rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-basis: 0;
+  box-sizing: border-box;
+  @media (max-width: 1024px) {
+    margin-left: 4rem;
+  }
+`;
+export const LongTextWrapper = styled.h2`
+  margin: 0 auto;
+
+  width: 30rem;
 `;
 
 export const Text = styled.h2`
