@@ -5,6 +5,6 @@ export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: Bebas Neue, sans-serif;
   }
 `;

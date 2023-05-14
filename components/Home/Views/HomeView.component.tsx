@@ -27,7 +27,7 @@ export const HomeView = () => {
     <Container>
       <BlackInfoContainer>
         <TitleContainer>
-          <TitleLetterByLetter text='FANGO TECH' color='white' />
+          <TitleLetterByLetter text='FANGO SOLUTIONS' color='white' />
           <BlackTextInfoContainer>
             CREATES INNOVATIVE DESIGN AND SMART LOGIC TO COMBINE AND CREATE A
             UNIQUE EXPERIENCE.

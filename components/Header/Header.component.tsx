@@ -17,7 +17,7 @@ export const Header: FC = () => {
       {hideLogo ? null : (
         <TitleWrapper>
           <LinkStyle href={"/"}>
-            <TitleLetterByLetter size='small' text='FANGO TECH' />
+            <TitleLetterByLetter size='small' text='FANGO SOLUTIONS' />
           </LinkStyle>
         </TitleWrapper>
       )}
