@@ -127,9 +127,15 @@ export const Underline = styled.hr`
   }
 `;
 export const LongTextWrapper = styled.h2`
-  margin: 0 auto;
-
-  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  color: white;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const Text = styled.h2`
