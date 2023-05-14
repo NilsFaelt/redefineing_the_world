@@ -108,6 +108,8 @@ export const ParallaxContainer = styled.main`
   width: 100%;
 `;
 export const SmallParallaxContainer = styled.main`
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   margin-right: 7rem;
   margin-top: 4rem;
   margin-bottom: 3rem;
