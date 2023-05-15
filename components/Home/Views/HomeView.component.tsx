@@ -19,13 +19,16 @@ import {
 } from "./HomeView.style";
 import { Parallax } from "react-parallax";
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
+import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
 
 export const HomeView = () => {
   const [zIndex, setZIndex] = useState(0);
-  console.log(zIndex);
+  const [toogleLanding, setToogleLanding] = useState(false);
+
   return (
     <Container>
-      <BlackInfoContainer>
+      <BlackInfoContainer onClick={() => setToogleLanding(true)}>
+        {!toogleLanding && <LandingTitleModal />}
         <TitleContainer>
           <TitleLetterByLetter text='FANGO SOLUTIONS' color='white' />
           <BlackTextInfoContainer>

@@ -12,6 +12,7 @@ export const BlackInfoContainer = styled.main`
   width: 100vw;
   display: flex;
   background-color: black;
+  padding-bottom: 1rem;
 `;
 
 export const TitleContainer = styled.div`
@@ -23,7 +24,7 @@ export const TitleContainer = styled.div`
   }
 `;
 
-export const BlackTextInfoContainer = styled.h2`
+export const BlackTextInfoContainer = styled.div`
   color: white;
   font-size: 1.3rem;
   margin-left: -2rem;
@@ -128,7 +129,7 @@ export const Underline = styled.hr`
     margin-left: 4rem;
   }
 `;
-export const LongTextWrapper = styled.h2`
+export const LongTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
