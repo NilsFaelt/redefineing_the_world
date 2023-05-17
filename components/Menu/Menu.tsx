@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import { Container, LinkStyledComponent, Title } from "./Menu.styles";
 
+interface test {}
 interface Props {
   toogleMenu: boolean;
   setToogleDropDownMenu: React.Dispatch<React.SetStateAction<boolean>>;
