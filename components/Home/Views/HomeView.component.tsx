@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
 import {
   Container,
@@ -18,10 +18,11 @@ import {
 
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
+import { ToggleLandingContext } from "../../../context /ToggleLandingContext";
 
 export const HomeView = () => {
+  const { toogleLanding, setToogleLanding } = useContext(ToggleLandingContext);
   const [zIndex, setZIndex] = useState(0);
-  const [toogleLanding, setToogleLanding] = useState(false);
 
   return (
     <Container>

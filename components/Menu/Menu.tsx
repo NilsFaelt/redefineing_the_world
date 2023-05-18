@@ -29,21 +29,7 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
       >
         HOME
       </LinkStyledComponent>
-      <LinkStyledComponent
-        onClick={() => {
-          setToogleDropDownMenu(false);
-        }}
-        onMouseOver={() => {
-          onHoover("ABOUT");
-        }}
-        onMouseLeave={() => {
-          onHoover("");
-        }}
-        animate={toogleMenu ? "true" : "false"}
-        href={"/pricing"}
-      >
-        PRICING
-      </LinkStyledComponent>
+
       <LinkStyledComponent
         onClick={() => {
           setToogleDropDownMenu(false);
@@ -58,6 +44,21 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         href={"/"}
       >
         CONTACT
+      </LinkStyledComponent>
+      <LinkStyledComponent
+        onClick={() => {
+          setToogleDropDownMenu(false);
+        }}
+        onMouseOver={() => {
+          onHoover("CONTACT");
+        }}
+        onMouseLeave={() => {
+          onHoover("");
+        }}
+        animate={toogleMenu ? "true" : "false"}
+        href={"/pricing"}
+      >
+        PRICING{" "}
       </LinkStyledComponent>
       <LinkStyledComponent
         onClick={() => {

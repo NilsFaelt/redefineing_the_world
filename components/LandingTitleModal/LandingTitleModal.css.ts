@@ -8,6 +8,7 @@ export const Container = styled.div`
   height: 100vh;
   background-color: black;
   z-index: 5;
+  cursor: pointer;
 `;
 export const TitleWrapper = styled.div`
   position: absolute;
