@@ -29,7 +29,7 @@ export const HomeView = () => {
       <BlackInfoContainer>
         {toogleLanding && <LandingTitleModal />}
         <TitleContainer>
-          {/* <TitleLetterByLetter text='FANGO SOLUTIONS' color='white' /> */}
+          <TitleLetterByLetter text='FANGO SOLUTIONS' color='white' />
           <BlackTextInfoContainer>
             CREATES INNOVATIVE DESIGN AND SMART LOGIC TO COMBINE AND CREATE A
             UNIQUE EXPERIENCE.
@@ -50,7 +50,7 @@ export const HomeView = () => {
             />
           </SecondBlackInfoContainer>
           <WhiteInfoContainer>
-            {/* <TitleLetterByLetter color='white' size='small' text='OUR AGENDA' /> */}
+            <TitleLetterByLetter color='white' size='small' text='OUR AGENDA' />
             <Text>
               OUR AGENDA IS TO BUILD A STRONG RELATIONSHIP WITH YOU. WE VALUE
               OUR CUSTOMERS AND AIM TO DELIVER EXCELLENCE IN EVERY PROJECT. OUR
@@ -102,7 +102,7 @@ export const HomeView = () => {
         ></Parallax>
       </ParallaxContainer> */}
       <LongTextWrapper>
-        {/* <TitleLetterByLetter
+        <TitleLetterByLetter
           color='white'
           text='THE HISTORY OF DESIGN AND PROGRAMMING IS ONE THAT HAS BEEN MARKED BY INNOVATION, CREATIVITY, AND DEDICATION TO IMPROVING THE HUMAN EXPERIENCE. FROM THE EARLIEST DRAWINGS AND INVENTIONS TO THE MOST COMPLEX SOFTWARE AND SYSTEMS OF TODAY, DESIGN AND PROGRAMMING HAVE PLAYED AN INTEGRAL ROLE IN OUR WORLD.
 
@@ -111,7 +111,7 @@ DESIGN HAS EVOLVED OVER TIME TO MEET THE CHANGING NEEDS OF SOCIETY. FROM THE EAR
 SIMILARLY, PROGRAMMING HAS EVOLVED TO ADDRESS THE GROWING DEMANDS FOR DIGITAL SOLUTIONS TO REAL-WORLD PROBLEMS. FROM THE EARLIEST COMPUTER PROGRAMS TO THE LATEST ARTIFICIAL INTELLIGENCE APPLICATIONS, PROGRAMMING HAS REVOLUTIONIZED THE WAY WE WORK, COMMUNICATE, AND LEARN.
 
 THE HISTORY OF DESIGN AND PROGRAMMING IS ONE OF CONTINUOUS INNOVATION AND CHANGE. AS WE LOOK TO THE FUTURE, WE MUST CONTINUE TO EMBRACE NEW TECHNOLOGIES AND DESIGN APPROACHES THAT CAN HELP US TO BUILD A BETTER WORLD FOR ALL.'
-        /> */}
+        />
       </LongTextWrapper>
     </Container>
   );
