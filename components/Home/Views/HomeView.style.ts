@@ -105,8 +105,11 @@ export const WhiteInfoContainer = styled.div`
   padding: 2rem;
   color: white;
   box-shadow: 1rem 1rem 1rem black;
-
   border: ${Theme.width.borders} solid black;
+  &:hover {
+    background-color: black;
+    transition: 1s;
+  }
   @media (max-width: 600px) {
     margin: 0;
     padding: 2rem;
