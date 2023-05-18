@@ -12,7 +12,11 @@ import {
 export const YourProjectView: FC = () => {
   return (
     <Container>
-      <TitleLetterByLetter size='small' text='HOW TO BUILD YOUR DREAM' />
+      <TitleLetterByLetter
+        color='white'
+        size='small'
+        text='HOW TO BUILD YOUR DREAM'
+      />
       <TextContainer>
         <Text>
           My approach to website design is collaborative. I encourage clients to
@@ -28,7 +32,7 @@ export const YourProjectView: FC = () => {
       <AskChatGtp />
       <TextContainerBlack>
         <InfoText
-          title='MY GOAL TO YOU'
+          title='MY GOAL TOWARDS YOU'
           text='Transparency is at the heart of my approach to client communication. I provide daily updates and keep you in the loop every step of the way, so you always know exactly where we stand. No surprises, no hidden agendas—just honest, open communication. While other companies may shy away from showing their cards, I believe that transparency is essential to building a strong, trusting relationship with my clients, and to delivering a final product that exceeds expectations.'
         />
       </TextContainerBlack>

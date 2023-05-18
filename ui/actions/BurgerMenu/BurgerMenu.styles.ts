@@ -13,7 +13,7 @@ const rotate360 = keyframes`
 `;
 
 export const BarOne = styled.div<Props>`
-  background-color: black;
+  background-color: white;
   width: 2.5rem;
   height: 0.15rem;
   border: ${Theme.width.borders} solid ${Theme.colors.border};
@@ -26,7 +26,7 @@ export const BarOne = styled.div<Props>`
       : "none"};
 `;
 export const BarTwo = styled.div<Props>`
-  background-color: black;
+  background-color: white;
   width: 2.5rem;
   height: 0.15rem;
   border: ${Theme.width.borders} solid ${Theme.colors.border};
@@ -40,7 +40,7 @@ export const BarTwo = styled.div<Props>`
   animation-delay: 0.2s;
 `;
 export const BarThree = styled.div<Props>`
-  background-color: black;
+  background-color: white;
   width: 2.5rem;
   height: 0.15rem;
   border: ${Theme.width.borders} solid ${Theme.colors.border};

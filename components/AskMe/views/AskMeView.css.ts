@@ -6,15 +6,17 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding-top: 5rem;
+  padding-top: 8rem;
+  background-color: black;
 `;
 
 export const TextContainer = styled.div`
   margin-left: 4rem;
   margin-right: 4rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   max-width: 40rem;
   box-sizing: border-box;
+  color: white;
   @media (max-width: 600px) {
     width: 100%;
     margin-left: 0rem;

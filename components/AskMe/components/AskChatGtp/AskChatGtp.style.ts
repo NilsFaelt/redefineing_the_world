@@ -18,5 +18,6 @@ export const TextContainer = styled.div`
   width: 20rem;
   margin-top: 2rem;
   text-align: center;
+  color: white;
 `;
 export const Text = styled.div``;
