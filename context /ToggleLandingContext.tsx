@@ -20,7 +20,7 @@ export const ToggleLandingContext = createContext<ToogleLandingContextValue>({
 export const ToggleLandingContextProvider: FC<{
   children: ReactNode;
 }> = ({ children }) => {
-  const [toogleLanding, setToogleLanding] = useState(false);
+  const [toogleLanding, setToogleLanding] = useState(true);
   return (
     <ToggleLandingContext.Provider value={{ toogleLanding, setToogleLanding }}>
       {children}
