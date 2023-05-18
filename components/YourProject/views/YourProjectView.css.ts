@@ -8,19 +8,21 @@ export const Container = styled.div`
   align-items: center;
   gap: 2rem;
   padding-top: 5rem;
+  background-color: black;
 `;
 export const TextContainerBlack = styled.div`
   max-width: 30rem;
 `;
 export const TextContainer = styled.div`
-  background-color: white;
-  color: black;
+  text-align: center;
+  background-color: none;
+  color: white;
   max-width: 30rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   box-sizing: border-box;
   height: auto;
-  padding: 2rem;
+  padding: 0rem;
   border: ${Theme.width.borders} solid black;
   ${css`
     @media (max-width: ${DeviceQuery.mobile}px) {

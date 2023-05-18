@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
 import {
   Container,
-  ParallaxContainer,
   Text,
   BlackInfoContainer,
   TitleContainer,
@@ -13,11 +12,10 @@ import {
   LeftBoxContainer,
   RightBoxContainer,
   SecondBlackTitle,
-  SmallParallaxContainer,
   Underline,
   LongTextWrapper,
 } from "./HomeView.style";
-import { Parallax } from "react-parallax";
+
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
 
@@ -51,7 +49,7 @@ export const HomeView = () => {
             />
           </SecondBlackInfoContainer>
           <WhiteInfoContainer>
-            <TitleLetterByLetter size='small' text='OUR AGENDA' />
+            <TitleLetterByLetter color='white' size='small' text='OUR AGENDA' />
             <Text>
               OUR AGENDA IS TO BUILD A STRONG RELATIONSHIP WITH YOU. WE VALUE
               OUR CUSTOMERS AND AIM TO DELIVER EXCELLENCE IN EVERY PROJECT. OUR
@@ -66,7 +64,7 @@ export const HomeView = () => {
           </WhiteInfoContainer>
         </LeftBoxContainer>
         <RightBoxContainer>
-          <SmallParallaxContainer>
+          {/* <SmallParallaxContainer>
             <Parallax
               blur={{ min: -15, max: 15 }}
               bgImage={
@@ -76,7 +74,7 @@ export const HomeView = () => {
               strength={-200}
               style={{ height: "10rem" }}
             ></Parallax>
-          </SmallParallaxContainer>
+          </SmallParallaxContainer> */}
           <SecondBlackTitle>
             {" "}
             AS A DEVELOPER, MY JOURNEY HAS BEEN DEFINED BY AN UNWAVERING PASSION
@@ -91,7 +89,7 @@ export const HomeView = () => {
           <Underline />
         </RightBoxContainer>
       </InfoBoxContainer>
-      <ParallaxContainer>
+      {/* <ParallaxContainer>
         <Parallax
           blur={{ min: -15, max: 15 }}
           bgImage={
@@ -101,7 +99,7 @@ export const HomeView = () => {
           strength={-200}
           style={{ height: "10rem" }}
         ></Parallax>
-      </ParallaxContainer>
+      </ParallaxContainer> */}
       <LongTextWrapper>
         <TitleLetterByLetter
           color='white'

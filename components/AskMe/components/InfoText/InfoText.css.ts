@@ -3,7 +3,7 @@ import { Theme } from "../../../../styles";
 
 export const Container = styled.div`
   width: clamp(20rem, 50%, 30rem);
-  background-color: black;
+  background-color: none;
   color: white;
   margin-top: 1rem;
   margin-bottom: 3rem;
@@ -16,6 +16,9 @@ export const Container = styled.div`
     box-sizing: border-box;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  @media (max-width: 600px) {
+    border: none;
   }
 `;
 export const Text = styled.h2`

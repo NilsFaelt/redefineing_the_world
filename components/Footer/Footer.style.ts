@@ -11,6 +11,7 @@ export const Container = styled.footer`
   width: 100%;
   height: 5rem;
   border-top: ${Theme.width.borders} solid black;
+  background-color: black;
 `;
 export const TextContainer = styled.footer`
   display: flex;
@@ -21,4 +22,5 @@ export const TextContainer = styled.footer`
 
 export const Text = styled.p`
   font-size: 0.6rem;
+  color: white;
 `;

@@ -40,9 +40,9 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
           onHoover("");
         }}
         animate={toogleMenu ? "true" : "false"}
-        href={"/"}
+        href={"/pricing"}
       >
-        ABOUT
+        PRICING
       </LinkStyledComponent>
       <LinkStyledComponent
         onClick={() => {

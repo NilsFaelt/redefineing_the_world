@@ -71,9 +71,9 @@ export const LinkStyledComponent = styled(Link)<Props>`
   text-align: center;
   text-decoration: none;
   font-size: 1.2rem;
-  color: black;
+  color: white;
   &:hover {
-    border-bottom: ${Theme.width.borders} solid black;
+    border-bottom: ${Theme.width.borders} solid white;
     transition: box-shadow 0.5s;
   }
 
@@ -99,7 +99,7 @@ export const Container = styled.nav<Props>`
   bottom: 0;
   width: 100vw;
   height: 0vh;
-  background-color: white;
+  background-color: black;
   border-radius: 0.5rem;
   box-shadow: 10px 10px 10px;
   border-bottom: ${Theme.width.borders} solid black;
