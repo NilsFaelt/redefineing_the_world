@@ -26,8 +26,8 @@ export const HomeView = () => {
 
   return (
     <Container>
-      <BlackInfoContainer onClick={() => setToogleLanding(true)}>
-        {!toogleLanding && <LandingTitleModal />}
+      <BlackInfoContainer>
+        {toogleLanding && <LandingTitleModal />}
         <TitleContainer>
           <TitleLetterByLetter text='FANGO SOLUTIONS' color='white' />
           <BlackTextInfoContainer>

@@ -7,7 +7,7 @@ export const LandingTitleModal: FC = () => {
   console.log(toogleLanding);
   return (
     <Container onClick={() => setToogleLanding(false)}>
-      <TitleWrapper>
+      <TitleWrapper onClick={() => setToogleLanding(false)}>
         <TitleLetterByLetter text='FANGO SOLUTIONS' color='white' />
       </TitleWrapper>
     </Container>
