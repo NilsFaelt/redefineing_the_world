@@ -11,18 +11,24 @@ export const Container = styled.main`
 `;
 
 export const BlackInfoContainer = styled.main`
-  width: 100vw;
-  display: flex;
   background-color: black;
   padding-bottom: 6rem;
   padding-top: 6rem;
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
 `;
 
 export const TitleContainer = styled.div`
   margin-left: 8rem;
   margin-top: 0rem;
   @media (max-width: 600px) {
+    text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-cnmtent: center;
   }
 `;
 
@@ -32,6 +38,9 @@ export const BlackTextInfoContainer = styled.div`
   margin-left: rem;
   margin-left: -2rem;
   max-width: 20rem;
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 `;
 
 export const InfoBoxContainer = styled.main`

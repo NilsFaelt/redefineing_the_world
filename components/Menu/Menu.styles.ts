@@ -89,7 +89,7 @@ export const LinkStyledComponent = styled(Link)<Props>`
 `;
 
 export const Container = styled.nav<Props>`
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;

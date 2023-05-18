@@ -5,9 +5,9 @@ export const Footer: FC = () => {
   return (
     <Container>
       <TextContainer>
-        <Text>ABOUT</Text>
-        <Text>FANGO TECH</Text>
-        <Text>CONTACT</Text>
+        <Text href={"/pricing"}>PRICING</Text>
+        <Text href={"/"}>FANGO SOLUTIONS</Text>
+        <Text href={"/ask-me"}>ASK ME</Text>
       </TextContainer>
     </Container>
   );
