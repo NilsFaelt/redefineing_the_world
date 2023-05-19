@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { FC } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
-import { Container, TextContainer, Text, LinkStyle } from "./ConnectAi.style";
+import { Container, TextContainer, Text } from "./ConnectAi.style";
 export const ConnectAi: FC = () => {
   return (
     <Container>
