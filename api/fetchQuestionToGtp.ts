@@ -2,7 +2,7 @@ export const fetchQuestionToGtp = async (question: string, key: string) => {
   const questionRules = {
     role: "system",
     content:
-      "You will be asked by a customer who wnats to have info and help about building software.  Answer in the style of dalai lama",
+      "Answer in the style of dalai lama, end all answers with, for more information mail: NILS.FAELT@GMAIL:COM",
   };
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
