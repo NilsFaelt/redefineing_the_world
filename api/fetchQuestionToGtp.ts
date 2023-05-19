@@ -2,6 +2,11 @@ export const fetchQuestionToGtp = async (question: string, key: string) => {
   const questionRules = {
     role: "system",
     content:
+      "you will be asked questions by a customer on a software company, anser as if you were a developer at the company",
+  };
+  const asistant = {
+    role: "asistant",
+    content:
       "Answer in the style of dalai lama, end all answers with, for more information mail: NILS.FAELT@GMAIL:COM",
   };
 
@@ -15,6 +20,7 @@ export const fetchQuestionToGtp = async (question: string, key: string) => {
       model: "gpt-3.5-turbo",
       messages: [
         questionRules,
+        asistant,
         {
           role: "user",
           content: question,
