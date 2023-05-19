@@ -12,6 +12,7 @@ export const Header: FC = () => {
   console.log(router.pathname);
   const [toogleMenu, setToogleMenu] = useState(false);
   const [toogleDropDownMenu, setToogleDropDownMenu] = useState(false);
+
   return (
     <Container suppressHydrationWarning={true}>
       {hideLogo ? null : (

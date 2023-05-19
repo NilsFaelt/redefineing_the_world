@@ -80,6 +80,21 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
           setToogleDropDownMenu(false);
         }}
         onMouseOver={() => {
+          onHoover("CONTACT");
+        }}
+        onMouseLeave={() => {
+          onHoover("");
+        }}
+        animate={toogleMenu ? "true" : "false"}
+        href={"/connect-ai"}
+      >
+        CONNECT AI
+      </LinkStyledComponent>
+      <LinkStyledComponent
+        onClick={() => {
+          setToogleDropDownMenu(false);
+        }}
+        onMouseOver={() => {
           onHoover("LIFE");
         }}
         onMouseLeave={() => {
