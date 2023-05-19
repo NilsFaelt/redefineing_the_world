@@ -19,10 +19,10 @@ export const TextContainer = styled.div`
   width: 20rem;
   margin-top: 2rem;
   text-align: center;
-
   color: white;
-  /* box-shadow: 1rem 1rem 1rem black;
-  border: ${Theme.width.borders} solid black; */
   padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  border: 0.05rem solid white;
 `;
 export const Text = styled.div``;
