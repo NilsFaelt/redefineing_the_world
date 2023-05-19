@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BaseInput, Button } from "../../../../ui/actions";
-import { Loading } from "../../../../ui/feedback";
+import { Loading, TitleLetterByLetter } from "../../../../ui/feedback";
 import { InfoText } from "../InfoText/InfoText.component";
 import {
   Container,
@@ -39,6 +39,11 @@ export const AskChatGtp = () => {
   };
   return (
     <Container>
+      <TitleLetterByLetter
+        size='small'
+        text='HOW CAN I HELP YOU?'
+        color='white'
+      />
       {loading && <Loading size='small' />}
       <FormContainer>
         <BaseInput value={question} type='text' onChange={setQuestion} />
