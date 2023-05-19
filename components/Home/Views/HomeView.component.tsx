@@ -65,17 +65,6 @@ export const HomeView = () => {
           </WhiteInfoContainer>
         </LeftBoxContainer>
         <RightBoxContainer>
-          {/* <SmallParallaxContainer>
-            <Parallax
-              blur={{ min: -15, max: 15 }}
-              bgImage={
-                "https://images.unsplash.com/photo-1516614379323-3fc1b4061247?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
-              }
-              bgImageAlt=''
-              strength={-200}
-              style={{ height: "10rem" }}
-            ></Parallax>
-          </SmallParallaxContainer> */}
           <SecondBlackTitle>
             {" "}
             AS A DEVELOPER, MY JOURNEY HAS BEEN DEFINED BY AN UNWAVERING PASSION
@@ -90,17 +79,7 @@ export const HomeView = () => {
           <Underline />
         </RightBoxContainer>
       </InfoBoxContainer>
-      {/* <ParallaxContainer>
-        <Parallax
-          blur={{ min: -15, max: 15 }}
-          bgImage={
-            "https://images.unsplash.com/photo-1446729444801-31245ddba81a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGZvcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-          }
-          bgImageAlt=''
-          strength={-200}
-          style={{ height: "10rem" }}
-        ></Parallax>
-      </ParallaxContainer> */}
+
       <LongTextWrapper>
         <TitleLetterByLetter
           color='white'
