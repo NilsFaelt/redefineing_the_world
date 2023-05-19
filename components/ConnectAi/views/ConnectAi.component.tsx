@@ -28,12 +28,12 @@ export const ConnectAi: FC = () => {
       <TitleLetterByLetter
         size='small'
         color='white'
-        text='• LET GTP ANSWER ALL QUESTIONS'
+        text='• LET GTP ANSWER ALL QUESTIONS FOR YOU'
       />
       <TitleLetterByLetter
         size='small'
         color='white'
-        text='• IT MAKES YOUR WEBSITE FEEL ALIVE'
+        text='• IT MAKES YOUR WEBSITE FEEL ALIVE AND INTERACTABLE'
       />
       <TitleLetterByLetter
         size='small'

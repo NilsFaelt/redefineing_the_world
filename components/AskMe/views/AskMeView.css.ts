@@ -8,6 +8,9 @@ export const Container = styled.div`
   gap: 2rem;
   padding-top: 8rem;
   background-color: black;
+  background-image: url("https://images.unsplash.com/photo-1682688759157-57988e10ffa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
+  background-size: cover;
+  background-position: center;
 `;
 
 export const TextContainer = styled.div`
@@ -17,10 +20,7 @@ export const TextContainer = styled.div`
   max-width: 40rem;
   box-sizing: border-box;
   color: white;
-  background-image: url("https://images.unsplash.com/photo-1682688759157-57988e10ffa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
-  background-size: cover;
-  background-position: center;
-
+  background-color: ;
   @media (max-width: 600px) {
     width: 100%;
     margin-left: 0rem;

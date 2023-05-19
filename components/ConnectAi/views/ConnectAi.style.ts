@@ -27,7 +27,7 @@ export const TextContainer = styled.div`
   margin-bottom: 0rem;
   box-sizing: border-box;
   height: auto;
-  padding: 0rem;
+  padding: 1.5rem;
   border: ${Theme.width.borders} solid black;
 
   ${css`
