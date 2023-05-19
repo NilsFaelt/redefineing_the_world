@@ -9,6 +9,9 @@ export const Container = styled.div`
   gap: 2rem;
   padding-top: 5rem;
   background-color: black;
+  background-image: url("https://images.unsplash.com/photo-1682688759157-57988e10ffa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
+  background-size: cover;
+  background-position: center;
 `;
 export const TextContainerBlack = styled.div`
   max-width: 30rem;
@@ -23,6 +26,7 @@ export const TextContainer = styled.div`
   height: auto;
   padding: 0rem;
   border: ${Theme.width.borders} solid black;
+
   ${css`
     @media (max-width: ${DeviceQuery.mobile}px) {
       width: 94%;
