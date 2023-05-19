@@ -11,8 +11,15 @@ export const Container = styled.div`
   background-color: black;
   min-height: 100vh;
 `;
+export const InfoTextContainer = styled.div`
+  margin-top: 5rem;
+`;
 
 export const Text = styled.p`
+  font-size: 1rem;
+  color: white;
+`;
+export const LinkRef = styled.a`
   font-size: 1rem;
   color: white;
 `;

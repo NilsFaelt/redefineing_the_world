@@ -88,7 +88,7 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         animate={toogleMenu ? "true" : "false"}
         href={"/your-project"}
       >
-        YOUR PROJECT
+        YOUR FUTURE PROJECT
       </LinkStyledComponent>
     </Container>
   );

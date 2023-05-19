@@ -12,7 +12,7 @@ export const PricingView: FC = () => {
     <Container>
       {/* <TitleLetterByLetter color='white' text='PRICING AND OUR WAY OF WORK' /> */}
       <InfoContainer>
-        <Text>• ALWAYS SET PRICES UNLESS YOU WANT IT TO BE BY HOUR</Text>
+        <Text>• ALWAYS SET PRICES UNLESS YOU WANT IT SOME OTHER WAY</Text>
         <InnerInfoContainer>
           <SmallText>
             • YOU SHOULD BE ABLE TO KNOW YOUR TOTAL PRICE FROM DAY ONE

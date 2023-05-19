@@ -14,10 +14,9 @@ export const TextContainerBlack = styled.div`
   max-width: 30rem;
 `;
 export const TextContainer = styled.div`
-  text-align: center;
   background-color: none;
   color: white;
-  max-width: 30rem;
+  max-width: 27rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   box-sizing: border-box;
@@ -26,7 +25,7 @@ export const TextContainer = styled.div`
   border: ${Theme.width.borders} solid black;
   ${css`
     @media (max-width: ${DeviceQuery.mobile}px) {
-      width: 100%;
+      width: 94%;
       padding-left: 0rem;
       padding-right: 0rem;
     }
