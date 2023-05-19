@@ -17,7 +17,7 @@ export const fetchQuestionToGtp = async (question: string, key: string) => {
         questionRules,
         {
           role: "user",
-          content: `${question} ?`,
+          content: question,
         },
       ],
 
