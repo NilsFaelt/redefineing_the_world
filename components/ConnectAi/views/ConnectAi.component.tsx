@@ -17,17 +17,17 @@ export const ConnectAi: FC = () => {
       />
       <TextContainer>
         <Text>
-          IN TODAYS RAPIDLY EVOLVING WORLD, EMBRACING CHANGE IS ESSENTIAL FOR
-          BUSINESSES TO STAY COMPETITIVE AND RELEVANT. ONE OF THE MOST IMPACTFUL
-          CHANGES IS THE INTEGRATION OF ARTIFICIAL INTELLIGENCE AI. BUSINESSES
-          THAT EMBRACE AI GAIN A SIGNIFICANT ADVANTAGE BY UNLOCKING NEW
-          OPPORTUNITIES, IMPROVING EFFICIENCY, AND ENHANCING DECISION-MAKING
-          PROCESSES. ITS CRUCIAL FOR EVERYONE TO RECOGNIZE THE TRANSFORMATIVE
-          POWER OF AI AND NOT REMAIN ON THE SIDELINES. BY PROACTIVELY
-          IMPLEMENTING AI SOLUTIONS, BUSINESSES CAN DRIVE INNOVATION, STREAMLINE
-          OPERATIONS, AND DELIVER PERSONALIZED EXPERIENCES TO THEIR CUSTOMERS.
-          EMBRACING AI IS NOT JUST AN OPTION; ITS A NECESSITY FOR SUCCESS IN THE
-          DIGITAL AGE.
+          In todays rapidly evolving world, embracing change is essential for
+          businesses to stay competitive and relevant. One of the most impactful
+          changes is the integration of artificial intelligence (AI). Businesses
+          that embrace AI gain a significant advantage by unlocking new
+          opportunities, improving efficiency, and enhancing decision-making
+          processes. Its crucial for everyone to recognize the transformative
+          power of AI and not remain on the sidelines. By proactively
+          implementing AI solutions, businesses can drive innovation, streamline
+          operations, and deliver personalized experiences to their customers.
+          Embracing AI is not just an option; its a necessity for success in the
+          digital age.
         </Text>
       </TextContainer>
       <BulletDotTextContainer>
