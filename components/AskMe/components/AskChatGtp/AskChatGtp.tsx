@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BaseInput, Button } from "../../../../ui/actions";
 import { Loading, TitleLetterByLetter } from "../../../../ui/feedback";
-import { InfoText } from "../InfoText/InfoText.component";
+
 import {
   Container,
   FormContainer,
   Text,
   TextContainer,
 } from "./AskChatGtp.style";
-import { useMutateGtpQuestion } from "./hooks/useMutateGtpQuestion";
 
 export const AskChatGtp = () => {
   const [loading, setLoading] = useState(false);
   const [gtpAnswer, setGtpAnswer] = useState("");
-  const { data, status, mutateAsync } = useMutateGtpQuestion();
   const [question, setQuestion] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = async () => {
     if (question === "") return null;
@@ -34,9 +33,14 @@ export const AskChatGtp = () => {
       });
     const answer = data.choices?.[0].message.content
       ? data.choices?.[0].message.content
-      : "";
+      : "Please ask again";
     setGtpAnswer(answer);
   };
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
   return (
     <Container>
       <TitleLetterByLetter
@@ -44,9 +48,14 @@ export const AskChatGtp = () => {
         text='HOW CAN I HELP YOU?'
         color='white'
       />
-      {loading && <Loading size='small' />}
+
       <FormContainer>
-        <BaseInput value={question} type='text' onChange={setQuestion} />
+        <BaseInput
+          inputRef={inputRef}
+          value={question}
+          type='text'
+          onChange={setQuestion}
+        />
         <Button
           onclick={(e) => {
             e.preventDefault();
@@ -56,7 +65,16 @@ export const AskChatGtp = () => {
         />
       </FormContainer>
       <TextContainer>
-        <Text>{gtpAnswer}</Text>
+        {loading && <Loading size='small' />}
+        {gtpAnswer ? (
+          <Text>
+            {gtpAnswer} <br /> <br /> For more information please contact us,
+            you find all contact info under contact in menu. Best regards Fango
+            Solutions
+          </Text>
+        ) : (
+          <Text></Text>
+        )}
       </TextContainer>
     </Container>
   );

@@ -16,6 +16,12 @@ export const Container = styled.div`
   background-position: center;
   padding-bottom: 5rem;
 `;
+export const BulletDotTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
 export const TextContainerBlack = styled.div`
   max-width: 30rem;
 `;

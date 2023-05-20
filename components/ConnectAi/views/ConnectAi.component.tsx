@@ -1,7 +1,12 @@
 import Link from "next/link";
 import React, { FC } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
-import { Container, TextContainer, Text } from "./ConnectAi.style";
+import {
+  Container,
+  TextContainer,
+  Text,
+  BulletDotTextContainer,
+} from "./ConnectAi.style";
 export const ConnectAi: FC = () => {
   return (
     <Container>
@@ -25,38 +30,38 @@ export const ConnectAi: FC = () => {
           DIGITAL AGE.
         </Text>
       </TextContainer>
-      <TitleLetterByLetter
-        size='small'
-        color='white'
-        text='• LET GTP ANSWER ALL QUESTIONS FOR YOU'
-      />
-      <TitleLetterByLetter
-        size='small'
-        color='white'
-        text='• IT MAKES YOUR WEBSITE FEEL ALIVE AND INTERACTABLE'
-      />
-      <TitleLetterByLetter
-        size='small'
-        color='white'
-        text='• ITS FUN AND FILLED WITH ENDLESS OPPURTUNITIES'
-      />
-      <TitleLetterByLetter
-        size='small'
-        color='white'
-        text='• DONT BE THE ONE WHOM DIDNT JOIN THE TRAIN'
-      />
-      <TitleLetterByLetter
-        size='small'
-        color='white'
-        text='• KEEPS YOU COMPANY/WEBSITE COMPETITIVE '
-      />
-      <TextContainer>
-        <TitleLetterByLetter size='small' color='white' text='PRICE AND TIME' />
-        <Text>
-          FOR A BASIC IMPLEMANTATION: <br /> 2DAYS TO GET IT UP RUNNING IF YOU
-          HAVE A WEBSITE FOR MORE SPECIFIC SCENARIOS PLEASE CONTACT US
-        </Text>
-      </TextContainer>
+      <BulletDotTextContainer>
+        <TitleLetterByLetter
+          size='small'
+          color='white'
+          text='• LET GTP ANSWER ALL QUESTIONS FOR YOU'
+        />
+        <TitleLetterByLetter
+          size='small'
+          color='white'
+          text='• IT MAKES YOUR WEBSITE FEEL ALIVE AND INTERACTABLE'
+        />
+        <TitleLetterByLetter
+          size='small'
+          color='white'
+          text='• ITS FUN AND FILLED WITH ENDLESS OPPURTUNITIES'
+        />
+        <TitleLetterByLetter
+          size='small'
+          color='white'
+          text='• DONT BE THE ONE WHOM DIDNT JOIN THE TRAIN'
+        />
+        <TitleLetterByLetter
+          size='small'
+          color='white'
+          text='• KEEPS YOU COMPANY/WEBSITE COMPETITIVE '
+        />
+        <TitleLetterByLetter
+          size='small'
+          color='white'
+          text='• IT ONLY TAKES TWO DAYS TO HAVE A AI INPLEMENTED TO YOUR SITE'
+        />
+      </BulletDotTextContainer>
     </Container>
   );
 };
