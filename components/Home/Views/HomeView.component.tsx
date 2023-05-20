@@ -19,6 +19,7 @@ import {
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
 import { ToggleLandingContext } from "../../../context /ToggleLandingContext";
+import { Button } from "../../../ui/actions";
 
 export const HomeView = () => {
   const { toogleLanding, setToogleLanding } = useContext(ToggleLandingContext);
@@ -29,7 +30,11 @@ export const HomeView = () => {
       <BlackInfoContainer>
         {toogleLanding && <LandingTitleModal />}
         <TitleContainer>
-          <TitleLetterByLetter text='FANGO SOLUTIONS' color='white' />
+          <TitleLetterByLetter
+            size='small'
+            text='FANGO SOLUTIONS'
+            color='white'
+          />
           <BlackTextInfoContainer>
             CREATES INNOVATIVE DESIGN AND SMART LOGIC TO COMBINE AND CREATE A
             UNIQUE EXPERIENCE.
@@ -49,6 +54,7 @@ export const HomeView = () => {
         OUR FERVOR LIES IN CRAFTING NOVEL DESIGNS AND TECHNOLOGY THAT PUSH THE BOUNDARIES OF CREATIVITY. OUR AIM IS TO BRING YOUR ASPIRATIONS TO FRUITION WITH A COMBINATION OF OUR PASSION FOR TECHNOLOGY AND FLAIR FOR STYLING. BY MERGING THESE TWO ELEMENTS, WE STRIVE TO CONNECT PEOPLE AND ELEVATE THEM THROUGH OUR WORK. WE IMBUE EVERY KEYSTROKE AND BRUSHSTROKE WITH OUR UNWAVERING COMMITMENT AND DEDICATION TO REALIZING YOUR VISION.'
             />
           </SecondBlackInfoContainer>
+
           <WhiteInfoContainer>
             <TitleLetterByLetter color='white' size='small' text='OUR AGENDA' />
             <Text>

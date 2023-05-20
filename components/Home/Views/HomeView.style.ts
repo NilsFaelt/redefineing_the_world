@@ -12,7 +12,7 @@ export const Container = styled.main`
 
 export const BlackInfoContainer = styled.main`
   background-color: black;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   padding-top: 6rem;
   @media (max-width: 600px) {
     margin: 0 auto;
@@ -34,7 +34,7 @@ export const TitleContainer = styled.div`
 
 export const BlackTextInfoContainer = styled.div`
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-left: rem;
   margin-left: -2rem;
   max-width: 20rem;
