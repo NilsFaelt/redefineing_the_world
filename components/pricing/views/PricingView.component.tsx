@@ -1,13 +1,20 @@
-import React, { FC } from "react";
-import { TitleLetterByLetter } from "../../../ui/feedback";
+import React, { FC, useState } from "react";
+import { Button } from "../../../ui/actions";
+
+import { CalculatePriceContainer } from "../components";
 import {
   Container,
   InfoContainer,
   Text,
   InnerInfoContainer,
   SmallText,
+  CaluculatePriceContainerStyle,
 } from "./Pricing.css";
 export const PricingView: FC = () => {
+  const [caluculatePrice, setCalculatePrice] = useState(false);
+  const handleClick = () => {
+    setCalculatePrice(!caluculatePrice);
+  };
   return (
     <Container>
       {/* <TitleLetterByLetter color='white' text='PRICING AND OUR WAY OF WORK' /> */}
@@ -63,6 +70,13 @@ export const PricingView: FC = () => {
           </SmallText>
         </InnerInfoContainer>
       </InfoContainer>
+      <CaluculatePriceContainerStyle>
+        <Button
+          onclick={handleClick}
+          text={!caluculatePrice ? "CALCULATE PRICE" : "CLOSE"}
+        />
+        {caluculatePrice && <CalculatePriceContainer />}
+      </CaluculatePriceContainerStyle>
     </Container>
   );
 };

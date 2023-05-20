@@ -27,6 +27,20 @@ export const InfoContainer = styled.main`
     width: 20rem;
   }
 `;
+export const CaluculatePriceContainerStyle = styled.main`
+  positon: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 0rem;
+  background-color: none;
+  margin-bottom: 5rem;
+
+  @media (max-width: 600px) {
+    width: 20rem;
+  }
+`;
 export const InnerInfoContainer = styled.main`
   padding-top: 0rem;
   background-color: none;
