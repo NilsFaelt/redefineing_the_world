@@ -14,7 +14,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    console.log(req.body.projectInfo);
     const isApiKey = ApiKeySchema.safeParse(apiKey);
     if (!isApiKey.success) {
       res.status(404).json({ error: "Invalid API key" });
