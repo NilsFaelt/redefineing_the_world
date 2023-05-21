@@ -46,6 +46,7 @@ export const Text = styled.h2`
 `;
 export const ClicableTextButton = styled.button`
   color: white;
+  font-size: 1rem;
   background-color: black;
   border: none;
   border-bottom: 0.05rem solid white;

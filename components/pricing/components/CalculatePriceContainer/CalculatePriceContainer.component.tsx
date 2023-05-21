@@ -50,7 +50,7 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
       });
     const answer = data.choices?.[0].message.content
       ? data.choices?.[0].message.content
-      : "Please ask again, i didnt understand";
+      : "Please ask again, i didnt understand, and provide as accurate information as possible";
     setGtpAnswer(answer);
   };
   console.log(gtpAnswer);

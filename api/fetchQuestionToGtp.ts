@@ -2,7 +2,7 @@ export const fetchQuestionToGtp = async (question: string, key: string) => {
   const questionRules = {
     role: "system",
     content:
-      "you will be asked questions by a customer on a software company, answer as if you were customer service at the company",
+      "you will be asked questions by a customer on a software company, answer as if you were customer service at the company, and the company main focus is at implementing ai, front-end-developing and design, but we do evrything in software",
   };
   const asistant = {
     role: "assistant",
