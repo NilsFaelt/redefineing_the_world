@@ -5,12 +5,12 @@ export const fetchPriceCalculationGtp = async (
   const questionRules = {
     role: "system",
     content:
-      "you are a working as customer service for a software company, and you will be asked for a price for a software-project. ",
+      "you are a working as customer service for a software company, and you will be asked for a price for a software-project based on theese guidlines:project-type:portfoolio: 50 000 - 60 000sek, webstore 200 000 - 250 000sek, social-media 500 000 or more, app 150 000 - 300 000sek depending on complexity, design: none provided 15000 - 20000sek extra, ai: basic = 15 000 sek extra, more advanced ai 30 000 sek, payment: 20 000 - 40 000 depending on complexity,. ",
   };
   const asistant = {
     role: "assistant",
     content:
-      "answer in the style of Dalai Lama and give  the price you think is accurate with the information you get and use theese guidlines:project-type:portfoolio: 50 000 - 60 000sek, webstore 200 000 - 250 000sek, social-media 500 000 or more, app 150 000 - 300 000sek depending on complexity, design: none provided 15000 - 20000sek extra, ai: basic = 15 000 sek extra, more advanced ai 30 000 sek, payment: 20 000 - 40 000 depending on complexity, end with the accumilated price ",
+      "answer in the style of Dalai Lama and give  the price you think is accurate with the information you get and, end with the accumilated price ",
   };
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {

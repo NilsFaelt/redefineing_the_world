@@ -20,8 +20,10 @@ export const Container = styled.div`
   padding: 2rem;
   box-sizeing: border-box;
   z-index: 2;
+  scale: 0.8;
   @media (max-width: 600px) {
     width: 80%;
+    scale: 1;
   }
 `;
 export const InnerContainer = styled.form`
