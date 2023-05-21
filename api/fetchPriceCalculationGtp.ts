@@ -4,13 +4,12 @@ export const fetchPriceCalculationGtp = async (
 ) => {
   const questionRules = {
     role: "system",
-    content: "you are a Price Estimation Specialist on a software company",
+    content:
+      "you will get some information which you will use to calculate a price for building a website/app. a small non complex app will be around 50 000 sek and a big complex app will be 500 000 sek, a webstore is about 200 00 sek  and a simple website for displaying information is 50 000 sek,  If they provide a deisgn the app will be less complex. If they want to implement ai the app will be around 20 000 sek more expensive. If they want to implement payments methods it will be  20 000 - 30 000 sek more expensive. if they only want ai its 15 000 - 40 000 sek. complex systems will be over 500 000 sek, other can be",
   };
-  // you will get some information which you will use to calculate a price for building a website/app.
   const asistant = {
     role: "assistant",
-    content:
-      "calculate the price based on this info use your own thoughts: A small non complex app will be around 50 000 sek and a big complex app will be 500 000 sek, a webstore is about 200 00 sek  and a simple website for displaying information is 50 000 sek,  If they provide a deisgn the app will be less complex. If they want to implement ai the app will be around 20 000 sek more expensive. If they want to implement payments methods it will be  20 000 - 30 000 sek more expensive. if they only want ai its 15 000 - 40 000 sek. complex systems will be over 500 000 sek",
+    content: "Answer in the style of dalai lama ",
   };
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
