@@ -7,6 +7,7 @@ import {
   InnerContainer,
   Text,
   Close,
+  MailLink,
 } from "./CalculatePriceContainer.styles";
 
 interface Props {
@@ -113,8 +114,14 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
         </InnerContainer>
       ) : (
         <Text>
-          {gtpAnswer} <br /> <br /> For more accurate prince info please contact
-          us at Fango Solutions.{" "}
+          {gtpAnswer} <br /> <br /> Please note that the price provided is a
+          wide estimate and may vary depending on specific project requirements.
+          It serves as a general indication of the potential cost for your
+          website project. For a more accurate and detailed quote, we recommend
+          contactnig us at <br />{" "}
+          <MailLink href={`mailto: nils.faelt@gmail.com`}>
+            Fango Solutions
+          </MailLink>
         </Text>
       )}
       {gtpAnswer !== "" ? (

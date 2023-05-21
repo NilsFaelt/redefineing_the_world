@@ -31,7 +31,7 @@ export const fetchPriceCalculationGtp = async (
       ],
 
       max_tokens: 250,
-      temperature: 0.2,
+      temperature: 0.4,
       // n: 1,
       // stop: ["\n"],
     }),

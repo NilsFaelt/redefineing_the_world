@@ -82,6 +82,10 @@ export const ToogleButton = styled.button`
     border-bottom: 0.05rem solid purple;
   }
 `;
+export const MailLink = styled.a`
+  color: white;
+  tex-decoration: underline 0.05rem solid;
+`;
 export const Close = styled.p`
   position: absolute;
   top: 0rem;
