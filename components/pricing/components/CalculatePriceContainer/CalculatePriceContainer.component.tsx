@@ -40,8 +40,8 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
         }and implementet ai: ${
           ai !== "" ? ai : "none provided"
         } and payment methods: ${payment ? payment : "none provided"}. and ${
-          other ? other : "none provided"
-        }.`,
+          other ? other : "none provided "
+        } and content: ${content ? content : "none provided"}`,
       }),
     })
       .then((res) => res.json())

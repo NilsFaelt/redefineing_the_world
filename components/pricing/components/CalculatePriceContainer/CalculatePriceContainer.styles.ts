@@ -21,8 +21,10 @@ export const Container = styled.div`
   box-sizeing: border-box;
   z-index: 2;
   scale: 0.8;
+  margin-left: -3rem;
   @media (max-width: 600px) {
     width: 80%;
+    margin-left: 0rem;
     scale: 1;
   }
 `;
