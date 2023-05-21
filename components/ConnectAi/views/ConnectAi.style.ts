@@ -1,5 +1,4 @@
-import Link from "next/link";
-import styled, { keyframes, css } from "styled-components";
+import styled, { css } from "styled-components";
 import { Theme } from "../../../styles";
 import { DeviceQuery } from "../../../styles";
 

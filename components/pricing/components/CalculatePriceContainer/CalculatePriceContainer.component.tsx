@@ -19,6 +19,7 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
   const [loading, setLoading] = useState(false);
   const [projectType, setProjectType] = useState("");
   const [design, setDesig] = useState("");
+  const [content, setContent] = useState("");
   const [ai, SetAi] = useState("");
   const [payment, setPayment] = useState("");
   const [other, setOther] = useState("");
@@ -38,7 +39,9 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
           design !== "" ? design : "none provided"
         }. ai: ${ai !== "" ? ai : "none provided"}. payment methods: ${
           payment ? payment : "none provided"
-        }. more info: ${other ? other : "none provided"}.`,
+        }. content: ${content ? content : "none provided"}. more info: ${
+          other ? other : "none provided"
+        }.`,
       }),
     })
       .then((res) => res.json())
@@ -84,6 +87,13 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
           />
           <BaseInput
             type='text'
+            value={content}
+            onChange={setContent}
+            color='white'
+            placeholder='DO YOU HAVE CONTENT?'
+          />
+          <BaseInput
+            type='text'
             value={ai}
             onChange={SetAi}
             color='white'
@@ -94,7 +104,7 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
             value={payment}
             onChange={setPayment}
             color='white'
-            placeholder='IMPLEMENT PAYMENT ?'
+            placeholder='E-COMMERCE ?'
           />
           <BaseInput
             type='text'

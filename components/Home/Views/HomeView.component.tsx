@@ -19,7 +19,6 @@ import {
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
 import { ToggleLandingContext } from "../../../context /ToggleLandingContext";
-import { Button } from "../../../ui/actions";
 
 export const HomeView = () => {
   const { toogleLanding, setToogleLanding } = useContext(ToggleLandingContext);

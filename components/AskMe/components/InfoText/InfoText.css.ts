@@ -23,6 +23,7 @@ export const Container = styled.div`
   }
   @media (max-width: 600px) {
     border: none;
+    margin: 0;
   }
 `;
 export const Text = styled.h2`

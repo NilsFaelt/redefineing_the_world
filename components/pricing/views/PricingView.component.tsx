@@ -19,7 +19,7 @@ export const PricingView: FC = () => {
     <Container>
       {/* <TitleLetterByLetter color='white' text='PRICING AND OUR WAY OF WORK' /> */}
       <InfoContainer>
-        <Text>• ALWAYS SET PRICES UNLESS YOU WANT IT SOME OTHER WAY</Text>
+        <Text>ALWAYS SET PRICES UNLESS YOU WANT IT SOME OTHER WAY</Text>
         <InnerInfoContainer>
           <SmallText>
             • YOU SHOULD BE ABLE TO KNOW YOUR TOTAL PRICE FROM DAY ONE
@@ -34,7 +34,7 @@ export const PricingView: FC = () => {
             LOWER THE COST OF OUR PROJECT.
           </SmallText>
         </InnerInfoContainer>
-        <Text>• GUILDELINE PRICING</Text>
+        <Text>GUILDELINE PRICING</Text>
         <InnerInfoContainer>
           <SmallText>
             •WHY MONEY IS SECONDARY? CAUSE IM IN THIS FOR THE PASION AND LOGTERM
@@ -47,7 +47,7 @@ export const PricingView: FC = () => {
             PAYMETS WILL OF COURSE BE REDUCED FROM YOU FINAL PRICE.
           </SmallText>
         </InnerInfoContainer>
-        <Text>• YOU NEVER PAY ANYTHING UNTIL YOU HAVE A PRODUCT </Text>
+        <Text>YOU NEVER PAY ANYTHING UNTIL YOU HAVE A PRODUCT </Text>
         <InnerInfoContainer>
           <SmallText>
             • MY GOAL IS TO HAVE YOU SATISFIED, AND I CANT POSSIBLE KNOW IF YOU
@@ -58,7 +58,7 @@ export const PricingView: FC = () => {
             COMPANIES DEVELOPING THEIR PRODUCT,AND CHARGING PRE DELIVERY.
           </SmallText>
         </InnerInfoContainer>
-        <Text>• WERE IN THIS TOGHETER, AND YOUR SATISFACTION IS MYGOAL</Text>
+        <Text>WERE IN THIS TOGHETER, AND YOUR SATISFACTION IS MYGOAL</Text>
         <InnerInfoContainer>
           <SmallText>
             • I RATHER SLEEP GOOD AND KEEP A GOOD REALTION WITH ALL THE PEOPLE I
