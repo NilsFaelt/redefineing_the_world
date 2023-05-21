@@ -39,7 +39,7 @@ export const Title = styled.h2`
   color: white;
 `;
 export const Text = styled.h2`
-  font-size: 0.8rem;
+  font-size: 1rem;
   max-width: 20rem;
   color: white;
   font-family: serif;
