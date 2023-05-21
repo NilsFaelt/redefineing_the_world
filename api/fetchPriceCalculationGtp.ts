@@ -5,7 +5,7 @@ export const fetchPriceCalculationGtp = async (
   const questionRules = {
     role: "system",
     content:
-      "you are a working as customer service for a software company, and you will be asked for a price for a software-project based on theese guidlines:project-type:portfoolio: 50 000 - 60 000sek, webstore 200 000 - 250 000sek, social-media 500 000 or more, app 150 000 - 300 000sek depending on complexity, design: none provided 15000 - 20000sek extra, ai: basic = 15 000 sek extra, more advanced ai 30 000 sek, payment: 20 000 - 40 000 depending on complexity,. ",
+      "you are a working as customer service for a software company, and you will be asked for a price for a software-project based on theese guidlines:project-type proce for a portfoolio: 50 000 - 60 000sek,price for a  webstore 200 000 - 250 000sek, price for social-media 500 000 or more, price for app 150 000 - 300 000sek depending on complexity, design: none provided 15000 - 20000sek extra, ai: basic = 15 000 sek extra, more advanced ai 30 000 sek, payment: 20 000 - 40 000 depending on complexit,. ",
   };
   const asistant = {
     role: "assistant",
