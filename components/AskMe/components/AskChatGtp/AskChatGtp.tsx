@@ -7,6 +7,7 @@ import {
   FormContainer,
   Text,
   TextContainer,
+  LinkStyle,
 } from "./AskChatGtp.style";
 
 export const AskChatGtp = () => {
@@ -68,9 +69,9 @@ export const AskChatGtp = () => {
         {loading && <Loading size='small' />}
         {gtpAnswer ? (
           <Text>
-            {gtpAnswer} <br /> <br /> For more information please contact us,
-            you find all contact info under contact in menu. Best regards Fango
-            Solutions
+            {gtpAnswer} <br /> <br /> For more information please contact us at:{" "}
+            <br />
+            <LinkStyle href={`/contact`}>Fango Solutions</LinkStyle>
           </Text>
         ) : (
           <Text></Text>

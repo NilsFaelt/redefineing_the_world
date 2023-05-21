@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 import { Theme } from "../../../../styles";
 
@@ -26,3 +27,8 @@ export const TextContainer = styled.div`
   border: 0.05rem solid white;
 `;
 export const Text = styled.div``;
+
+export const LinkStyle = styled(Link)`
+  color: white;
+  tex-decoration: underline 0.05rem solid;
+`;
