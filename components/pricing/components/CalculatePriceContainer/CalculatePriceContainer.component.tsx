@@ -112,7 +112,10 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
           />
         </InnerContainer>
       ) : (
-        <Text>{gtpAnswer}</Text>
+        <Text>
+          {gtpAnswer} <br /> <br /> For more accurate prince info please contact
+          us at Fango Solutions.{" "}
+        </Text>
       )}
       {gtpAnswer !== "" ? (
         <ClicableTextButton onClick={() => handelClickBack()}>

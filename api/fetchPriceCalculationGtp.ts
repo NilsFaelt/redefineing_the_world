@@ -10,7 +10,7 @@ export const fetchPriceCalculationGtp = async (
   const asistant = {
     role: "assistant",
     content:
-      "Answer in the style of dalai lama. and say that for a correct price  you need to mail or call Fango Solutions,  a small non complex app will be around 50 000 sek and a big complex app will be 500 000 sek, a webstore is about 200 00 sek  and a simple website for displaying information is 50 000 sek",
+      "a small non complex app will be around 50 000 sek and a big complex app will be 500 000 sek, a webstore is about 200 00 sek  and a simple website for displaying information is 50 000 sek",
   };
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
