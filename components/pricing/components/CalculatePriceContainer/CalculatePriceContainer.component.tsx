@@ -95,7 +95,7 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
             value={ai}
             onChange={SetAi}
             color='white'
-            placeholder='IDEAS REGARINDG AI?'
+            placeholder='IMPLEMENT AI?'
           />
           <BaseInput
             type='text'
