@@ -7,32 +7,38 @@ export const Container = styled.div`
   align-items: center;
   justiify-content: center;
   position: absolute;
-  z-index: 2;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   border: ${Theme.width.borders} solid white;
   border-radius: 1rem;
-  width: clamp(20rem, 30rem, 100rem);
-  min-height: 10rem;
+  width: 30rem;
   background-color: rgba(0, 0, 0, 1);
   box-shadow: 1rem 1rem 1rem;
-  padding-top: 1rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
+  padding: 2rem;
   box-sizeing: border-box;
+  z-index: 2;
   @media (max-width: 600px) {
-    width: 90%;
+    width: 80%;
   }
+`;
+export const InnerContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 `;
 export const Title = styled.h2`
   font-size: 0.9rem;
   color: white;
 `;
 export const Text = styled.h2`
-  margin-top: 2rem;
-  font-size: 0.7rem;
-  max-width: 18rem;
+  font-size: 0.8rem;
+  max-width: 20rem;
   color: white;
+  font-family: serif;
 `;
 export const ClicableTextButton = styled.button`
   color: white;
@@ -40,6 +46,7 @@ export const ClicableTextButton = styled.button`
   border: none;
   border-bottom: 0.05rem solid white;
   cursor: pointer;
+  margin-top: 2rem;
   &:hover {
     transition: 0.5s;
     border-bottom: 0.05rem solid purple;
@@ -67,6 +74,19 @@ export const ToogleButtonContainer = styled.div`
 export const ToogleButton = styled.button`
   color: white;
   background-color: black;
+  border: none;
+  border-bottom: 0.05rem solid white;
+  cursor: pointer;
+  &:hover {
+    transition: 0.5s;
+    border-bottom: 0.05rem solid purple;
+  }
+`;
+export const Close = styled.p`
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+  color: white;
   border: none;
   border-bottom: 0.05rem solid white;
   cursor: pointer;

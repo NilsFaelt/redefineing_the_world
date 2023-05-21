@@ -11,9 +11,9 @@ import {
   CaluculatePriceContainerStyle,
 } from "./Pricing.css";
 export const PricingView: FC = () => {
-  const [caluculatePrice, setCalculatePrice] = useState(false);
+  const [toogleCaluculatePrice, setToogleCalculatePrice] = useState(false);
   const handleClick = () => {
-    setCalculatePrice(!caluculatePrice);
+    setToogleCalculatePrice(!toogleCaluculatePrice);
   };
   return (
     <Container>
@@ -73,9 +73,11 @@ export const PricingView: FC = () => {
       <CaluculatePriceContainerStyle>
         <Button
           onclick={handleClick}
-          text={!caluculatePrice ? "CALCULATE PRICE" : "CLOSE"}
+          text={!toogleCaluculatePrice ? "CALCULATE PRICE" : "CLOSE"}
         />
-        {caluculatePrice && <CalculatePriceContainer />}
+        {toogleCaluculatePrice && (
+          <CalculatePriceContainer setToogle={setToogleCalculatePrice} />
+        )}
       </CaluculatePriceContainerStyle>
     </Container>
   );

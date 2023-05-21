@@ -1,176 +1,124 @@
 import React, { FC, useState } from "react";
-import { Button } from "../../../../ui/actions";
-import { TitleLetterByLetter } from "../../../../ui/feedback";
+import { BaseInput, Button } from "../../../../ui/actions";
+import { Loading, TitleLetterByLetter } from "../../../../ui/feedback";
 import {
-  Container,
-  ToogleButtonContainer,
-  EachQuestionContainer,
   ClicableTextButton,
-  ToogleButton,
-  Title,
+  Container,
+  InnerContainer,
   Text,
+  Close,
 } from "./CalculatePriceContainer.styles";
 
-interface Values {
-  projectType: number;
-  design: number;
-  ai: number;
-  clearIdea: number;
+interface Props {
+  setToogle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const CalculatePriceContainer: FC = () => {
-  const [values, setValues] = useState<Values>({
-    projectType: 0,
-    design: 0,
-    ai: 0,
-    clearIdea: 0,
-  });
-  const [page, setPage] = useState(1);
-  const showLeftButton = page > 1 && page !== 5;
+export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
+  const [gtpAnswer, setGtpAnswer] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [projectType, setProjectType] = useState("");
+  const [design, setDesig] = useState("");
+  const [ai, SetAi] = useState("");
+  const [payment, setPayment] = useState("");
+  const [other, setOther] = useState("");
 
-  const handleClickLeft = () => {
-    setPage(page - 1);
+  const handelClickBack = async () => {
+    setGtpAnswer("");
   };
-
+  const handelClick = async () => {
+    setLoading(true);
+    const data = await fetch("/api/gtp-price-calculation", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        projectInfo: `type of project:${projectType}. design: ${
+          design !== "" ? design : "none provided"
+        }. ai: ${ai !== "" ? ai : "nonw provided"}. payment metodhs: ${
+          payment ? payment : "none provided"
+        }. more info: ${other ? other : "none provided"}.`,
+      }),
+    })
+      .then((res) => res.json())
+      .finally(() => {
+        setLoading(false);
+      });
+    const answer = data.choices?.[0].message.content
+      ? data.choices?.[0].message.content
+      : "Please ask again, i didnt understand";
+    setGtpAnswer(answer);
+  };
+  console.log(gtpAnswer);
   return (
     <Container>
-      <Title>PLEASE FILL IN TO GET A CALCULATION</Title>
+      <Close onClick={() => setToogle(false)}>CLOSE</Close>
+      <TitleLetterByLetter
+        size='small'
+        color='white'
+        text='GET A PRICE INVOICE'
+      />
+      {!gtpAnswer ? (
+        <InnerContainer>
+          <Text>
+            TO RECEIVE AN ACCURATE COST ESTIMATE, PLEASE PROVIDE US WITH THE
+            NECESSARY DETAILS. THE MORE INFORMATION YOU PROVIDE, THE MORE
+            PRECISE OUR CALCULATION WILL BE. KINDLY FILL IN THE REQUIRED FIELDS
+            TO GET A TAILORED QUOTE FOR YOUR PROJECT.
+          </Text>
 
-      {page === 1 && (
-        <EachQuestionContainer>
-          <Text>TYPE OF PROJECT</Text>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1),
-                setValues((prev) => ({ ...prev, projectType: 1 }));
+          <BaseInput
+            type='text'
+            value={projectType}
+            onChange={setProjectType}
+            color='white'
+            placeholder='TYPE OF PROJECT?'
+          />
+          <BaseInput
+            type='text'
+            value={design}
+            onChange={setDesig}
+            color='white'
+            placeholder='DO YOU HAVE A DESIGN?'
+          />
+          <BaseInput
+            type='text'
+            value={ai}
+            onChange={SetAi}
+            color='white'
+            placeholder='IDEAS REGARINDG AI?'
+          />
+          <BaseInput
+            type='text'
+            value={payment}
+            onChange={setPayment}
+            color='white'
+            placeholder='IMPLEMENT PAYMENT ?'
+          />
+          <BaseInput
+            type='text'
+            value={other}
+            onChange={setOther}
+            color='white'
+            placeholder='OTHER'
+          />
+          {loading && <Loading />}
+          <Button
+            onclick={(e) => {
+              e.preventDefault();
+              handelClick();
             }}
-          >
-            Front-End
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1),
-                setValues((prev) => ({ ...prev, projectType: 2 }));
-            }}
-          >
-            Back-End
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1),
-                setValues((prev) => ({ ...prev, projectType: 3 }));
-            }}
-          >
-            Full-Stack
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1),
-                setValues((prev) => ({ ...prev, projectType: 2 }));
-            }}
-          >
-            Fix website
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1),
-                setValues((prev) => ({ ...prev, projectType: 2 }));
-            }}
-          >
-            Dont know
-          </ClicableTextButton>
-        </EachQuestionContainer>
+            text='CALCULATE'
+          />
+        </InnerContainer>
+      ) : (
+        <Text>{gtpAnswer}</Text>
       )}
-      {page === 2 && (
-        <EachQuestionContainer>
-          <Text>DESIGN</Text>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1), setValues((prev) => ({ ...prev, design: 1 }));
-            }}
-          >
-            I HAVE A DESIGN
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1), setValues((prev) => ({ ...prev, design: 2 }));
-            }}
-          >
-            I HAVE A IDEA BUT NOT A DESIGN
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1), setValues((prev) => ({ ...prev, design: 3 }));
-            }}
-          >
-            I NEED A DESIGN
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1), setValues((prev) => ({ ...prev, design: 0 }));
-            }}
-          >
-            NONE
-          </ClicableTextButton>
-        </EachQuestionContainer>
-      )}
-      {page === 3 && (
-        <EachQuestionContainer>
-          <Text>DO YOU WANT AI IMPLEMENTED</Text>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1), setValues((prev) => ({ ...prev, ai: 1 }));
-            }}
-          >
-            YES
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1), setValues((prev) => ({ ...prev, ai: 0 }));
-            }}
-          >
-            NO
-          </ClicableTextButton>
-        </EachQuestionContainer>
-      )}
-      {page === 4 && (
-        <EachQuestionContainer>
-          <Text>I HAVE A CLEAR IDEA WHAT I WANT</Text>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1),
-                setValues((prev) => ({ ...prev, clearIdea: 1 }));
-            }}
-          >
-            YES
-          </ClicableTextButton>
-          <ClicableTextButton
-            onClick={() => {
-              setPage(page + 1),
-                setValues((prev) => ({ ...prev, clearIdea: 0 }));
-            }}
-          >
-            NO
-          </ClicableTextButton>
-        </EachQuestionContainer>
-      )}
-      {page === 5 && (
-        <Text>
-          The provided estimate serves as a general indication and should be
-          treated as a starting point for determining the potential cost of your
-          website. However, keep in mind that actual expenses can vary based on
-          project specifics, complexity, required features, and professional
-          consultation is advised for accurate pricing.{" "}
-        </Text>
-      )}
-      {page == 5 && <Title>500 000 sek</Title>}
-      {page === 5 && <Text>PLEASE MAIL OR CALL FOR MORE INFO</Text>}
-      {page !== 5 && <Text>STEP: {page} / 5</Text>}
-      <ToogleButtonContainer>
-        {showLeftButton && (
-          <ToogleButton onClick={() => handleClickLeft()}>BACK</ToogleButton>
-        )}
-      </ToogleButtonContainer>
+      {gtpAnswer !== "" ? (
+        <ClicableTextButton onClick={() => handelClickBack()}>
+          Back
+        </ClicableTextButton>
+      ) : null}
     </Container>
   );
 };

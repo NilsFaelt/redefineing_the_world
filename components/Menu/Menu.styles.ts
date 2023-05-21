@@ -36,6 +36,8 @@ const openLink = keyframes`
   }
   100% {
     opacity: 1;
+   
+
   }
 `;
 const closeLink = keyframes`
@@ -51,7 +53,8 @@ const closeLink = keyframes`
   }
   100% {
     opacity: 0;
-    margin-top:-50rem
+    margin-top:-50rem;
+    pointer-events:none;
     
   }
 `;
@@ -59,7 +62,6 @@ const closeLink = keyframes`
 export const Title = styled.h3<Props>`
   color: black;
   position: absolute;
-  font-weihgt: thin;
   top: 4rem;
   opacity: ${(props) => (props.animate === "true" ? 1 : 0)};
 `;

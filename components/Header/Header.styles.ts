@@ -6,7 +6,7 @@ export const Container = styled.header`
   width: 100%;
   height: 5rem;
   /* border-bottom: ${Theme.width.borders} solid ${Theme.colors.border}; */
-
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0rem 0.5rem 0rem;
 `;
