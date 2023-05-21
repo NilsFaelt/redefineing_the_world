@@ -1,9 +1,0 @@
-[build]
-  command = "npm run build"
-  functions = "out_functions"
-
-[functions]
-  directory = "api"
-
-  [functions.timeout]
-    idle_seconds = 30 
