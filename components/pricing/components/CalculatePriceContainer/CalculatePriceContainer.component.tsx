@@ -39,9 +39,7 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
           design !== "" ? design : "none provided"
         }. ai: ${ai !== "" ? ai : "none provided"}. payment methods: ${
           payment ? payment : "none provided"
-        }. content: ${content ? content : "none provided"}. more info: ${
-          other ? other : "none provided"
-        }.`,
+        }. more info: ${other ? other : "none provided"}.`,
       }),
     })
       .then((res) => res.json())
