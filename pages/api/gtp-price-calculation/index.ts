@@ -13,6 +13,7 @@ export default async function handler(
   req: NextApiRequest & { body: RequestBody },
   res: NextApiResponse
 ) {
+  console.log(req.body.projectInfo);
   if (req.method === "POST") {
     const isApiKey = ApiKeySchema.safeParse(apiKey);
     if (!isApiKey.success) {

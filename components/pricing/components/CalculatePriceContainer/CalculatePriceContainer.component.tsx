@@ -35,11 +35,13 @@ export const CalculatePriceContainer: FC<Props> = ({ setToogle }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        projectInfo: `whats the price for a project with this info:  project-type:${projectType}. design: ${
+        projectInfo: `i would like a:${projectType}. with design: ${
           design !== "" ? design : "none provided"
-        }. ai: ${ai !== "" ? ai : "none provided"}. payment methods: ${
-          payment ? payment : "none provided"
-        }. more info: ${other ? other : "none provided"}.`,
+        }and implementet ai: ${
+          ai !== "" ? ai : "none provided"
+        } and payment methods: ${payment ? payment : "none provided"}. and ${
+          other ? other : "none provided"
+        }.`,
       }),
     })
       .then((res) => res.json())
