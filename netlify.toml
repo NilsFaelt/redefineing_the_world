@@ -1,0 +1,7 @@
+[build]
+command = "npm run build"
+functions = "out_functions"
+
+[functions]
+directory = "api"
+timeout = 30 
