@@ -80,6 +80,21 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
           setToogleDropDownMenu(false);
         }}
         onMouseOver={() => {
+          onHoover("LIFE");
+        }}
+        onMouseLeave={() => {
+          onHoover("");
+        }}
+        animate={toogleMenu ? "true" : "false"}
+        href={"/test-bot"}
+      >
+        TEST CHAT BOT
+      </LinkStyledComponent>
+      <LinkStyledComponent
+        onClick={() => {
+          setToogleDropDownMenu(false);
+        }}
+        onMouseOver={() => {
           onHoover("CONTACT");
         }}
         onMouseLeave={() => {
