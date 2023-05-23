@@ -27,17 +27,13 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     { type: "bot", message: "Hello my friend, how can i help you today?" },
   ]);
 
-  console.log(companyGudlines);
   const questionRules = {
     role: "system",
-    content:
-      "answer in short and consist answers, in the style of dalai lama, max 30 words",
+    content: `you will be asked questions by a customer on a  company that specialize in${companyGudlines}, answer as if you were customer service at the company`,
   };
   const asistant = {
     role: "assistant",
-    content: `you are customer service for a company  that specialize in  ${
-      companyGudlines ? companyGudlines : "evrything"
-    } t`,
+    content: "answer short and consist",
   };
 
   const inputRef = useRef<HTMLInputElement>(null);
