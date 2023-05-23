@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
-
 import { Container, Text, InfoTextContainer, LinkRef } from "./ContactView.css";
 
 export const ContactView: FC = () => {
