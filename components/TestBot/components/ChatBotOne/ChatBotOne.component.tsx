@@ -112,11 +112,17 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
         zIndex={toggleChat ? 0 : -1}
         opacity={toggleChat ? 1 : 0}
       >
-        {dialog.map((each) => {
+        {dialog.map((each, i) => {
           if (each.type === "user") {
-            return <UserAnswer text={each.message} />;
+            return <UserAnswer text={each.message} key={i} />;
           }
-          return <ChatBotAnswer toogleChat={toggleChat} text={each.message} />;
+          return (
+            <ChatBotAnswer
+              key={i}
+              toogleChat={toggleChat}
+              text={each.message}
+            />
+          );
         })}
         {loading && (
           <ChatBotAnswer
