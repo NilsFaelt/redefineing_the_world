@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import React from "react";
-import { PricingView } from "../../components/Pricing";
+import { PricingView } from "../../components/pricing";
 
 import MainLayout from "../../layout/MainLayout";
 
