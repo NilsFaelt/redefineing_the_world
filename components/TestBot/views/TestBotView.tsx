@@ -12,7 +12,7 @@ export const TestBotView: FC = () => {
       <InputWrapper>
         <InputLabel>
           Please write few words about the company you want the chat-bot to
-          represent, exmaple: Greenfood, Non profit, Sweden, Start-Up'
+          represent, exmaple:Greenfood, Non profit, Sweden, Start-Up
         </InputLabel>
         <BaseInput
           value={companyInfo}
