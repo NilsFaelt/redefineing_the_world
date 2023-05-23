@@ -30,11 +30,12 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   console.log(companyGudlines);
   const questionRules = {
     role: "system",
-    content: "answer in short and consist answers, in the style of dalai lama",
+    content:
+      "answer in short and consist answers, in the style of dalai lama, max 30 words",
   };
   const asistant = {
     role: "assistant",
-    content: `you will be a customer service for a company with the company specialize in  ${
+    content: `you are customer service for a company  that specialize in  ${
       companyGudlines ? companyGudlines : "evrything"
     } t`,
   };
