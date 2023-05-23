@@ -1,32 +1,47 @@
-import React, { FC } from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
+import React, { FC, useRef, useEffect } from "react";
 import { useState } from "react";
 import { BaseInput } from "../../../../ui/actions";
+import { ChatBotAnswer } from "./ChatBotAnswer";
 import { Container, ImageStyle, Close, TextArea } from "./ChatBotOne.style";
+import { UserAnswer } from "./UserAnswer";
+
 export const ChatBotOne: FC = () => {
-  const [toogleChat, setToogleChat] = useState(false);
+  const [toggleChat, setToggleChat] = useState(false);
   const [question, setQuestion] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const textAreaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     inputRef.current?.focus();
-  }, [toogleChat]);
+    scrollToBottom();
+  }, [toggleChat]);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [textAreaRef.current?.scrollHeight]);
+
+  const scrollToBottom = () => {
+    textAreaRef.current?.scrollTo({
+      top: textAreaRef.current.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <Container border={toogleChat ? "1px solid white" : "none"}>
+    <Container border={toggleChat ? "1px solid white" : "none"}>
       <Close
-        onClick={() => setToogleChat(!toogleChat)}
-        zIndex={toogleChat ? 0 : -1}
-        opacity={toogleChat ? 1 : 0}
+        onClick={() => setToggleChat(!toggleChat)}
+        zIndex={toggleChat ? 0 : -1}
+        opacity={toggleChat ? 1 : 0}
       >
         Close
       </Close>
-      {!toogleChat && (
+      {!toggleChat && (
         <ImageStyle
-          zIndex={toogleChat ? -1 : 0}
-          opacity={toogleChat ? 0 : 1}
+          zIndex={toggleChat ? -1 : 0}
+          opacity={toggleChat ? 0 : 1}
           onClick={() => {
-            setToogleChat(!toogleChat);
+            setToggleChat(!toggleChat);
           }}
           alt=''
           src='/png/robot.png'
@@ -34,8 +49,23 @@ export const ChatBotOne: FC = () => {
           height={100}
         />
       )}
-      <TextArea zIndex={toogleChat ? 0 : -1} opacity={toogleChat ? 1 : 0} />
-      {toogleChat && (
+      <TextArea
+        ref={textAreaRef}
+        zIndex={toggleChat ? 0 : -1}
+        opacity={toggleChat ? 1 : 0}
+      >
+        <ChatBotAnswer
+          toogleChat={toggleChat}
+          text='God day, please give me a few words about the company you want me to represent'
+        />
+        <UserAnswer text='What is love? and harmony and feelings' />
+        <ChatBotAnswer
+          toogleChat={toggleChat}
+          text='God day, please give me a few words about the company you want me to represent'
+        />
+        <UserAnswer text='What is love? and harmony and feelings' />
+      </TextArea>
+      {toggleChat && (
         <BaseInput
           inputRef={inputRef}
           value={question}
