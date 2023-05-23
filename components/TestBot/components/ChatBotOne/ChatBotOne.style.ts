@@ -24,10 +24,12 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
   margin-top: 18rem;
   padding: 1rem;
   border-radius: 1rem;
   border: ${(props) => props.border};
+  background-color: ${(props) => props.color};
   transition: 1s;
 `;
 export const ChatContainer = styled.div`
@@ -77,6 +79,7 @@ export const ChatTextAndBotContainer = styled.div`
   margin-top: 0.5rem;
   font-size: 0.8rem;
 `;
+
 export const Close = styled.text<CloseProps>`
   color: white;
   position: absolute;

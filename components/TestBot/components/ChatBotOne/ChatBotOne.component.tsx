@@ -28,7 +28,10 @@ export const ChatBotOne: FC = () => {
   };
 
   return (
-    <Container border={toggleChat ? "1px solid white" : "none"}>
+    <Container
+      color={toggleChat ? "white" : "black"}
+      border={toggleChat ? "1px solid white" : "none"}
+    >
       <Close
         onClick={() => setToggleChat(!toggleChat)}
         zIndex={toggleChat ? 0 : -1}
