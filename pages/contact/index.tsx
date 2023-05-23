@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import React from "react";
-import { ContactView } from "../../components/Contact/views";
+import { ContactView } from "../../components/contact/views";
 
 import MainLayout from "../../layout/MainLayout";
 
