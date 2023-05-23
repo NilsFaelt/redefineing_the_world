@@ -3,7 +3,7 @@ import React from "react";
 import { ContactView } from "../../components/Contact/views";
 
 import MainLayout from "../../layout/MainLayout";
-const test = {};
+
 const index: NextPage = () => {
   return (
     <MainLayout>
