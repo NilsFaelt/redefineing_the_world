@@ -1,15 +1,9 @@
-export const fetchQuestionToGtp = async (question: string, key: string) => {
-  const questionRules = {
-    role: "system",
-    content:
-      "you will be asked questions by a customer on a software company, answer as if you were customer service at the company, and the company main focus is at implementing ai, front-end-developing and design, but we do evrything in software",
-  };
-  const asistant = {
-    role: "assistant",
-    content:
-      "Answer in the style of dalai lama. End all answers with, If asked about price, tell to see priceing under the pricing tab in the menu. If you dont know answer, say be more specific please",
-  };
-
+export const fetchQuestionToGtp = async (
+  question: string,
+  key: string,
+  questionRules: { role: string; content: string },
+  asistant: { role: string; content: string }
+) => {
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {

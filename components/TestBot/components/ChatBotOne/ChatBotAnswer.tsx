@@ -1,16 +1,19 @@
 import React from "react";
 import { FC } from "react";
+import { Loading, TitleLetterByLetter } from "../../../../ui/feedback";
 import {
   ChatTextBot,
   ImageStyleSmall,
   ChatTextAndBotContainer,
+  ChatLoadingText,
 } from "./ChatBotOne.style";
 interface Props {
   toogleChat: boolean;
   text: string;
+  loading?: boolean;
 }
 
-export const ChatBotAnswer: FC<Props> = ({ toogleChat, text }) => {
+export const ChatBotAnswer: FC<Props> = ({ toogleChat, text, loading }) => {
   return (
     <ChatTextAndBotContainer>
       <ImageStyleSmall
@@ -21,7 +24,8 @@ export const ChatBotAnswer: FC<Props> = ({ toogleChat, text }) => {
         width={100}
         height={100}
       />
-      <ChatTextBot>{text}</ChatTextBot>
+      {!loading && <ChatTextBot>{text}</ChatTextBot>}
+      {loading && <ChatLoadingText></ChatLoadingText>}
     </ChatTextAndBotContainer>
   );
 };

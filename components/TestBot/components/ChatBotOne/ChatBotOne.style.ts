@@ -16,6 +16,20 @@ interface CloseProps {
   opacity: number;
   zIndex: number;
 }
+interface ButtonWrapperProps {
+  opacity: number;
+}
+const loadingAnimation = keyframes`
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+`;
 
 export const Container = styled.div<ContainerProps>`
   position: relative;
@@ -24,8 +38,7 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-
-  margin-top: 18rem;
+  margin-top: 5rem;
   padding: 1rem;
   border-radius: 1rem;
   border: ${(props) => props.border};
@@ -72,12 +85,30 @@ export const ChatText = styled.p`
   background-color: grey;
   width: 75%;
 `;
+export const ChatLoadingText = styled.p`
+  margin-left: 0.5rem;
+  margin-top: -0.7rem;
+  font-size: 2.2rem;
+  color: black;
+  padding: 0rem;
+  width: 3rem;
+  height: 2rem;
+  &::after {
+    content: ".";
+    animation: ${loadingAnimation} 1s infinite;
+  }
+`;
 export const ChatTextAndBotContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 0.1rem;
   margin-top: 0.5rem;
   font-size: 0.8rem;
+`;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
 
 export const Close = styled.text<CloseProps>`
@@ -87,6 +118,9 @@ export const Close = styled.text<CloseProps>`
   top: -1.5rem;
   cursor: pointer;
   z-index: ${(props) => props.zIndex};
+  opacity: ${(props) => props.opacity};
+`;
+export const ButtonWrapper = styled.text<ButtonWrapperProps>`
   opacity: ${(props) => props.opacity};
 `;
 

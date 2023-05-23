@@ -16,6 +16,17 @@ export const AskChatGtp = () => {
   const [question, setQuestion] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const questionRules = {
+    role: "system",
+    content:
+      "you will be asked questions by a customer on a software company, answer as if you were customer service at the company, and the company main focus is at implementing ai, front-end-developing and design, but we do evrything in software",
+  };
+  const asistant = {
+    role: "assistant",
+    content:
+      "Answer in the style of dalai lama. End all answers with, If asked about price, tell to see priceing under the pricing tab in the menu. If you dont know answer, say be more specific please",
+  };
+
   const handleClick = async () => {
     if (question === "") return null;
 
@@ -25,7 +36,7 @@ export const AskChatGtp = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ question }),
+      body: JSON.stringify({ question, questionRules, asistant }),
     })
       .then((res) => res.json())
       .finally(() => {

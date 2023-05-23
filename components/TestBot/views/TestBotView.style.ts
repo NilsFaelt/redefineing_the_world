@@ -13,3 +13,14 @@ export const Container = styled.div`
   min-height: 100vh;
   background-color: black;
 `;
+export const InputLabel = styled.label`
+  color: white;
+  margin-bottom: 2rem;
+`;
+export const InputWrapper = styled.div`
+  display: flex;
+  width: 25rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+`;
