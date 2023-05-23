@@ -4,6 +4,7 @@ import { BurgerMenu } from "../../ui";
 
 import { TitleLetterByLetter } from "../../ui/feedback";
 import { Menu } from "../Menu";
+
 import { Container, TitleWrapper, LinkStyle } from "./Header.styles";
 
 export const Header: FC = () => {

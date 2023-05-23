@@ -19,6 +19,7 @@ import {
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
 import { ToggleLandingContext } from "../../../context /ToggleLandingContext";
+import { ChatBotOne } from "../../TestBot";
 
 export const HomeView = () => {
   const { toogleLanding, setToogleLanding } = useContext(ToggleLandingContext);
@@ -40,7 +41,6 @@ export const HomeView = () => {
           </BlackTextInfoContainer>
         </TitleContainer>
       </BlackInfoContainer>
-
       <InfoBoxContainer>
         <LeftBoxContainer>
           <SecondBlackInfoContainer
@@ -84,7 +84,6 @@ export const HomeView = () => {
           <Underline />
         </RightBoxContainer>
       </InfoBoxContainer>
-
       <LongTextWrapper>
         <TitleLetterByLetter
           color='white'

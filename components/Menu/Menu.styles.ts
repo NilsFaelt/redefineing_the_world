@@ -111,7 +111,7 @@ export const Container = styled.nav<Props>`
           ${open} 2s forwards
         `
       : css`
-          ${close} 2s forwards
+          ${close} 1s forwards
         `};
   animation-fill-mode: forwards;
 `;

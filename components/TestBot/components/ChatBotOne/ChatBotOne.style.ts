@@ -4,6 +4,10 @@ import styled, { keyframes } from "styled-components";
 interface ContainerProps {
   border: string;
 }
+interface InnerContainerProps {
+  opacity: number;
+  zIndex: number;
+}
 interface ImageProps {
   opacity: number;
   zIndex: number;
@@ -32,18 +36,23 @@ const loadingAnimation = keyframes`
 `;
 
 export const Container = styled.div<ContainerProps>`
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   margin-top: 5rem;
+  margin-bottom: 0rem;
   padding: 1rem;
   border-radius: 1rem;
   border: ${(props) => props.border};
   background-color: ${(props) => props.color};
   transition: 1s;
+`;
+export const InnerContainer = styled.div<InnerContainerProps>`
+  z-index: ${(props) => props.zIndex};
+  opacity: ${(props) => props.opacity};
 `;
 export const ChatContainer = styled.div`
   margin-top: 20rem;

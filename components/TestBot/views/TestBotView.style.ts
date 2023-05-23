@@ -1,6 +1,4 @@
 import styled, { keyframes, css } from "styled-components";
-import { Theme } from "../../../styles";
-import { DeviceQuery } from "../../../styles";
 
 export const Container = styled.div`
   display: flex;
@@ -8,14 +6,19 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0rem;
-  padding-bottom: 5rem;
+  padding-bottom: 25rem;
   width: 100%;
   min-height: 100vh;
   background-color: black;
+  @media (max-width: 600px) {
+  }
 `;
 export const InputLabel = styled.label`
   color: white;
   margin-bottom: 2rem;
+  @media (max-width: 600px) {
+    width: 15rem;
+  }
 `;
 export const InputWrapper = styled.div`
   display: flex;
@@ -23,4 +26,12 @@ export const InputWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 10rem;
+`;
+export const ChatbotWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 15rem;
 `;
