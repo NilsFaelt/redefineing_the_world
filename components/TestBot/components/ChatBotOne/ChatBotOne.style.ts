@@ -3,6 +3,9 @@ import styled, { keyframes } from "styled-components";
 
 interface ContainerProps {
   border: string;
+  left?: string;
+  right?: string;
+  center: string;
 }
 interface InnerContainerProps {
   opacity: number;
@@ -36,7 +39,33 @@ const loadingAnimation = keyframes`
 `;
 
 export const Container = styled.div<ContainerProps>`
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 75%;
+  @media (max-width: 1150px) {
+    left: 65%;
+  }
+  @media (max-width: 1000px) {
+    left: 55%;
+  }
+  @media (max-width: 850px) {
+    left: 45%;
+  }
+  @media (max-width: 700px) {
+    left: 38%;
+  }
+  @media (max-width: 500px) {
+    left: 30%;
+  }
+  @media (max-width: 450px) {
+    left: 10%;
+
+    ${(props) =>
+      props.center === "true"
+        ? " transform: translate(50%, 50%)"
+        : "  transform: translate(-0%, -50%)"};
+  }
+  transform: translate(50%, 10%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,8 +75,12 @@ export const Container = styled.div<ContainerProps>`
   margin-bottom: 0rem;
   padding: 1rem;
   border-radius: 1rem;
-  border: ${(props) => props.border};
+  border: ${(props) => props.border} solid black;
   background-color: ${(props) => props.color};
+  ${(props) =>
+    props.center === "true"
+      ? " transform: translate(60%, 35%)"
+      : "  transform: translate(-50%, -50%)"};
   transition: 1s;
 `;
 export const InnerContainer = styled.div<InnerContainerProps>`
@@ -128,6 +161,7 @@ export const Close = styled.text<CloseProps>`
   cursor: pointer;
   z-index: ${(props) => props.zIndex};
   opacity: ${(props) => props.opacity};
+  font-size: 1rem;
 `;
 export const ButtonWrapper = styled.text<ButtonWrapperProps>`
   opacity: ${(props) => props.opacity};

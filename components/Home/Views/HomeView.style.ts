@@ -181,3 +181,9 @@ export const Text = styled.h2`
     }
   `}
 `;
+export const ChatBotWrapper = styled.div`
+  position: fixed;
+  left: -5rem;
+  top: -1rem;
+  z-index: 1;
+`;

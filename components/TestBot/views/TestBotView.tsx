@@ -3,15 +3,11 @@ import { BaseInput } from "../../../ui/actions";
 
 import { Header } from "../../Header";
 import { ChatBotOne } from "../components";
-import {
-  Container,
-  InputWrapper,
-  InputLabel,
-  ChatbotWrapper,
-} from "./TestBotView.style";
+import { Container, InputWrapper, InputLabel } from "./TestBotView.style";
 
 export const TestBotView: FC = () => {
-  const [companyInfo, setCompanyInfo] = useState("");
+  const [companyInfo, setCompanyInfo] = useState("loving company");
+  console.log(companyInfo);
   return (
     <Container>
       <InputWrapper>
@@ -27,9 +23,7 @@ export const TestBotView: FC = () => {
         />
       </InputWrapper>
       <Header />
-      <ChatbotWrapper>
-        <ChatBotOne companyGudlines={companyInfo} />
-      </ChatbotWrapper>
+      <ChatBotOne companyGudlines={companyInfo} />
     </Container>
   );
 };

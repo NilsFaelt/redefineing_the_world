@@ -25,13 +25,5 @@ export const InputWrapper = styled.div`
   width: 25rem;
   flex-direction: column;
   align-items: center;
-  margin-top: 10rem;
-`;
-export const ChatbotWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-top: 15rem;
+  margin-top: 7rem;
 `;

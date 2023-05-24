@@ -82,6 +82,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
 
   return (
     <Container
+      center={!toggleChat ? "true" : "false"}
       color={toggleChat ? "white" : "none"}
       border={toggleChat ? "1px solid white" : "none"}
     >
