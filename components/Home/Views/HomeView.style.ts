@@ -11,36 +11,48 @@ export const Container = styled.main`
 `;
 
 export const BlackInfoContainer = styled.main`
-  width: 100vw;
-  display: flex;
   background-color: black;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   padding-top: 6rem;
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
 `;
 
 export const TitleContainer = styled.div`
   margin-left: 8rem;
   margin-top: 0rem;
   @media (max-width: 600px) {
+    text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-cnmtent: center;
   }
+`;
+export const NewsButtonWrapper = styled.div`
+  margin-bottom: -5rem;
 `;
 
 export const BlackTextInfoContainer = styled.div`
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-left: rem;
   margin-left: -2rem;
   max-width: 20rem;
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 `;
 
 export const InfoBoxContainer = styled.main`
   display: flex;
   flex-direction: row;
   gap: 5rem;
-  background-image: url("https://images.unsplash.com/photo-1682688759157-57988e10ffa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
-  background-size: cover; /* Adjust as needed */
-  background-position: center; /* Adjust as needed */
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
   @media (max-width: 1024px) {
     flex-direction: column;
     justify-content: center;
@@ -105,8 +117,11 @@ export const WhiteInfoContainer = styled.div`
   padding: 2rem;
   color: white;
   box-shadow: 1rem 1rem 1rem black;
-
   border: ${Theme.width.borders} solid black;
+  &:hover {
+    background-color: black;
+    transition: 1s;
+  }
   @media (max-width: 600px) {
     margin: 0;
     padding: 2rem;

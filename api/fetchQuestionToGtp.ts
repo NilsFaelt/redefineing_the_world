@@ -1,9 +1,9 @@
-export const fetchQuestionToGtp = async (question: string, key: string) => {
-  const questionRules = {
-    role: "system",
-    content:
-      "answer in the style of dalai lama, and end all answers with for more info mail: Nils.faelt@gmail.com",
-  };
+export const fetchQuestionToGtp = async (
+  question: string,
+  key: string,
+  questionRules: { role: string; content: string },
+  asistant: { role: string; content: string }
+) => {
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -14,6 +14,7 @@ export const fetchQuestionToGtp = async (question: string, key: string) => {
       model: "gpt-3.5-turbo",
       messages: [
         questionRules,
+        asistant,
         {
           role: "user",
           content: question,

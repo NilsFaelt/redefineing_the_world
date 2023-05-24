@@ -12,6 +12,10 @@ export const Container = styled.div`
   box-sizing: border-box;
   width: 100%;
   border: ${Theme.width.borders} solid black;
+  &:hover {
+    background-color: black;
+    transition: 1s;
+  }
   @media (max-width: 1024px) {
     box-sizing: border-box;
     padding-left: 2rem;
@@ -19,6 +23,7 @@ export const Container = styled.div`
   }
   @media (max-width: 600px) {
     border: none;
+    margin: 0;
   }
 `;
 export const Text = styled.h2`

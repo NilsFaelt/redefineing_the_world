@@ -7,26 +7,29 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding-top: 5rem;
+  padding-top: 7rem;
   background-color: black;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
 `;
 export const TextContainerBlack = styled.div`
   max-width: 30rem;
 `;
 export const TextContainer = styled.div`
-  text-align: center;
   background-color: none;
   color: white;
-  max-width: 30rem;
+  max-width: 27rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   box-sizing: border-box;
   height: auto;
-  padding: 0rem;
+  padding: 1rem;
   border: ${Theme.width.borders} solid black;
+
   ${css`
     @media (max-width: ${DeviceQuery.mobile}px) {
-      width: 100%;
+      width: 94%;
       padding-left: 0rem;
       padding-right: 0rem;
     }

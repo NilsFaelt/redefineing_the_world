@@ -1,20 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BaseInput, Button } from "../../../../ui/actions";
-import { Loading } from "../../../../ui/feedback";
-import { InfoText } from "../InfoText/InfoText.component";
+import { Loading, TitleLetterByLetter } from "../../../../ui/feedback";
+
 import {
   Container,
   FormContainer,
   Text,
   TextContainer,
+  LinkStyle,
 } from "./AskChatGtp.style";
-import { useMutateGtpQuestion } from "./hooks/useMutateGtpQuestion";
 
 export const AskChatGtp = () => {
   const [loading, setLoading] = useState(false);
   const [gtpAnswer, setGtpAnswer] = useState("");
-  const { data, status, mutateAsync } = useMutateGtpQuestion();
   const [question, setQuestion] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const questionRules = {
+    role: "system",
+    content:
+      "you will be asked questions by a customer on a software company, answer as if you were customer service at the company, and the company main focus is at implementing ai, front-end-developing and design, but we do evrything in software",
+  };
+  const asistant = {
+    role: "assistant",
+    content:
+      "Answer in the style of dalai lama. End all answers with, If asked about price, tell to see priceing under the pricing tab in the menu. If you dont know answer, say be more specific please",
+  };
 
   const handleClick = async () => {
     if (question === "") return null;
@@ -25,7 +36,7 @@ export const AskChatGtp = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ question }),
+      body: JSON.stringify({ question, questionRules, asistant }),
     })
       .then((res) => res.json())
       .finally(() => {
@@ -34,14 +45,29 @@ export const AskChatGtp = () => {
       });
     const answer = data.choices?.[0].message.content
       ? data.choices?.[0].message.content
-      : "";
+      : "PLEASE ASK AGAIN, MY EXPERTISE IS IN DEV";
     setGtpAnswer(answer);
   };
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
   return (
     <Container>
-      {loading && <Loading size='small' />}
+      <TitleLetterByLetter
+        size='small'
+        text='HOW CAN I HELP YOU?'
+        color='white'
+      />
+
       <FormContainer>
-        <BaseInput value={question} type='text' onChange={setQuestion} />
+        <BaseInput
+          inputRef={inputRef}
+          value={question}
+          type='text'
+          onChange={setQuestion}
+        />
         <Button
           onclick={(e) => {
             e.preventDefault();
@@ -51,7 +77,16 @@ export const AskChatGtp = () => {
         />
       </FormContainer>
       <TextContainer>
-        <Text>{gtpAnswer}</Text>
+        {loading && <Loading size='small' />}
+        {gtpAnswer ? (
+          <Text>
+            {gtpAnswer} <br /> <br /> For more information please contact us at:{" "}
+            <br />
+            <LinkStyle href={`/contact`}>Fango Solutions</LinkStyle>
+          </Text>
+        ) : (
+          <Text></Text>
+        )}
       </TextContainer>
     </Container>
   );

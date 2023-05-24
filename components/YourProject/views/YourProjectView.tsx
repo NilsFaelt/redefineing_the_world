@@ -28,7 +28,7 @@ export const YourProjectView: FC = () => {
           your goals and create a digital presence that youre proud of.
         </Text>
       </TextContainer>
-      <TitleLetterByLetter size='small' text='PLEASE ASK ME' />
+
       <AskChatGtp />
       <TextContainerBlack>
         <InfoText

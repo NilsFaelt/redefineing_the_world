@@ -8,6 +8,9 @@ export const Container = styled.div`
   gap: 2rem;
   padding-top: 8rem;
   background-color: black;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
 `;
 
 export const TextContainer = styled.div`
@@ -17,6 +20,7 @@ export const TextContainer = styled.div`
   max-width: 40rem;
   box-sizing: border-box;
   color: white;
+  background-color: ;
   @media (max-width: 600px) {
     width: 100%;
     margin-left: 0rem;

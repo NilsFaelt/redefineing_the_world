@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 import { Theme } from "../../styles";
 
@@ -20,7 +21,7 @@ export const TextContainer = styled.footer`
   width: 100%;
 `;
 
-export const Text = styled.p`
+export const Text = styled(Link)`
   font-size: 0.6rem;
   color: white;
 `;

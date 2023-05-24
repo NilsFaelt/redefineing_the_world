@@ -36,6 +36,8 @@ const openLink = keyframes`
   }
   100% {
     opacity: 1;
+   
+
   }
 `;
 const closeLink = keyframes`
@@ -51,7 +53,8 @@ const closeLink = keyframes`
   }
   100% {
     opacity: 0;
-    margin-top:-50rem
+    margin-top:-50rem;
+    pointer-events:none;
     
   }
 `;
@@ -59,7 +62,6 @@ const closeLink = keyframes`
 export const Title = styled.h3<Props>`
   color: black;
   position: absolute;
-  font-weihgt: thin;
   top: 4rem;
   opacity: ${(props) => (props.animate === "true" ? 1 : 0)};
 `;
@@ -89,7 +91,7 @@ export const LinkStyledComponent = styled(Link)<Props>`
 `;
 
 export const Container = styled.nav<Props>`
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,7 +111,7 @@ export const Container = styled.nav<Props>`
           ${open} 2s forwards
         `
       : css`
-          ${close} 2s forwards
+          ${close} 1s forwards
         `};
   animation-fill-mode: forwards;
 `;

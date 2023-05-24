@@ -29,20 +29,21 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
       >
         HOME
       </LinkStyledComponent>
+
       <LinkStyledComponent
         onClick={() => {
           setToogleDropDownMenu(false);
         }}
         onMouseOver={() => {
-          onHoover("ABOUT");
+          onHoover("CONTACT");
         }}
         onMouseLeave={() => {
           onHoover("");
         }}
         animate={toogleMenu ? "true" : "false"}
-        href={"/pricing"}
+        href={"/contact"}
       >
-        PRICING
+        CONTACT
       </LinkStyledComponent>
       <LinkStyledComponent
         onClick={() => {
@@ -55,9 +56,9 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
           onHoover("");
         }}
         animate={toogleMenu ? "true" : "false"}
-        href={"/"}
+        href={"/pricing"}
       >
-        CONTACT
+        PRICING{" "}
       </LinkStyledComponent>
       <LinkStyledComponent
         onClick={() => {
@@ -85,9 +86,39 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
           onHoover("");
         }}
         animate={toogleMenu ? "true" : "false"}
+        href={"/test-bot"}
+      >
+        TEST CHAT BOT
+      </LinkStyledComponent>
+      <LinkStyledComponent
+        onClick={() => {
+          setToogleDropDownMenu(false);
+        }}
+        onMouseOver={() => {
+          onHoover("CONTACT");
+        }}
+        onMouseLeave={() => {
+          onHoover("");
+        }}
+        animate={toogleMenu ? "true" : "false"}
+        href={"/connect-ai"}
+      >
+        CONNECT AI
+      </LinkStyledComponent>
+      <LinkStyledComponent
+        onClick={() => {
+          setToogleDropDownMenu(false);
+        }}
+        onMouseOver={() => {
+          onHoover("LIFE");
+        }}
+        onMouseLeave={() => {
+          onHoover("");
+        }}
+        animate={toogleMenu ? "true" : "false"}
         href={"/your-project"}
       >
-        YOUR PROJECT
+        YOUR FUTURE PROJECT
       </LinkStyledComponent>
     </Container>
   );

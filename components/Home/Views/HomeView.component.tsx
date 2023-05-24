@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
 import {
   Container,
@@ -18,24 +18,29 @@ import {
 
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
+import { ToggleLandingContext } from "../../../context /ToggleLandingContext";
+import { ChatBotOne } from "../../TestBot";
 
 export const HomeView = () => {
+  const { toogleLanding, setToogleLanding } = useContext(ToggleLandingContext);
   const [zIndex, setZIndex] = useState(0);
-  const [toogleLanding, setToogleLanding] = useState(false);
 
   return (
     <Container>
-      <BlackInfoContainer onClick={() => setToogleLanding(true)}>
-        {!toogleLanding && <LandingTitleModal />}
+      <BlackInfoContainer>
+        {toogleLanding && <LandingTitleModal />}
         <TitleContainer>
-          <TitleLetterByLetter text='FANGO SOLUTIONS' color='white' />
+          <TitleLetterByLetter
+            size='small'
+            text='FANGO SOLUTIONS'
+            color='white'
+          />
           <BlackTextInfoContainer>
             CREATES INNOVATIVE DESIGN AND SMART LOGIC TO COMBINE AND CREATE A
             UNIQUE EXPERIENCE FOR YOU.
           </BlackTextInfoContainer>
         </TitleContainer>
       </BlackInfoContainer>
-
       <InfoBoxContainer>
         <LeftBoxContainer>
           <SecondBlackInfoContainer
@@ -48,6 +53,7 @@ export const HomeView = () => {
         OUR FERVOR LIES IN CRAFTING NOVEL DESIGNS AND TECHNOLOGY THAT PUSH THE BOUNDARIES OF CREATIVITY. OUR AIM IS TO BRING YOUR ASPIRATIONS TO FRUITION WITH A COMBINATION OF OUR PASSION FOR TECHNOLOGY AND FLAIR FOR STYLING. BY MERGING THESE TWO ELEMENTS, WE STRIVE TO CONNECT PEOPLE AND ELEVATE THEM THROUGH OUR WORK. WE IMBUE EVERY KEYSTROKE AND BRUSHSTROKE WITH OUR UNWAVERING COMMITMENT AND DEDICATION TO REALIZING YOUR VISION.'
             />
           </SecondBlackInfoContainer>
+
           <WhiteInfoContainer>
             <TitleLetterByLetter color='white' size='small' text='OUR AGENDA' />
             <Text>
@@ -64,17 +70,6 @@ export const HomeView = () => {
           </WhiteInfoContainer>
         </LeftBoxContainer>
         <RightBoxContainer>
-          {/* <SmallParallaxContainer>
-            <Parallax
-              blur={{ min: -15, max: 15 }}
-              bgImage={
-                "https://images.unsplash.com/photo-1516614379323-3fc1b4061247?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
-              }
-              bgImageAlt=''
-              strength={-200}
-              style={{ height: "10rem" }}
-            ></Parallax>
-          </SmallParallaxContainer> */}
           <SecondBlackTitle>
             {" "}
             AS A DEVELOPER, MY JOURNEY HAS BEEN DEFINED BY AN UNWAVERING PASSION
@@ -89,17 +84,6 @@ export const HomeView = () => {
           <Underline />
         </RightBoxContainer>
       </InfoBoxContainer>
-      {/* <ParallaxContainer>
-        <Parallax
-          blur={{ min: -15, max: 15 }}
-          bgImage={
-            "https://images.unsplash.com/photo-1446729444801-31245ddba81a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGZvcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-          }
-          bgImageAlt=''
-          strength={-200}
-          style={{ height: "10rem" }}
-        ></Parallax>
-      </ParallaxContainer> */}
       <LongTextWrapper>
         <TitleLetterByLetter
           color='white'

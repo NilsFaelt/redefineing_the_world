@@ -1,18 +1,25 @@
-import React, { FC } from "react";
-import { TitleLetterByLetter } from "../../../ui/feedback";
+import React, { FC, useState } from "react";
+import { Button } from "../../../ui/actions";
+
+import { CalculatePriceContainer } from "../components";
 import {
   Container,
   InfoContainer,
   Text,
   InnerInfoContainer,
   SmallText,
+  CaluculatePriceContainerStyle,
 } from "./Pricing.css";
 export const PricingView: FC = () => {
+  const [toogleCaluculatePrice, setToogleCalculatePrice] = useState(false);
+  const handleClick = () => {
+    setToogleCalculatePrice(!toogleCaluculatePrice);
+  };
   return (
     <Container>
-      <TitleLetterByLetter color='white' text='PRICING AND OUR WAY OF WORK' />
+      {/* <TitleLetterByLetter color='white' text='PRICING AND OUR WAY OF WORK' /> */}
       <InfoContainer>
-        <Text>• ALWAYS SET PRICES UNLESS YOU WANT IT TO BE BY HOUR</Text>
+        <Text>ALWAYS SET PRICES UNLESS YOU WANT IT SOME OTHER WAY</Text>
         <InnerInfoContainer>
           <SmallText>
             • YOU SHOULD BE ABLE TO KNOW YOUR TOTAL PRICE FROM DAY ONE
@@ -27,19 +34,20 @@ export const PricingView: FC = () => {
             LOWER THE COST OF OUR PROJECT.
           </SmallText>
         </InnerInfoContainer>
-        <Text>• GUILDELINE PRICING, ONE MONTH 80 000 SEK ON INVOICE</Text>
+        <Text>GUILDELINE PRICING</Text>
         <InnerInfoContainer>
           <SmallText>
-            • WHY HALF THE PRICE TO MOST OTHER COMPANIES ? CAUSE IM IN THIS FOR
-            THE PASION AND LOGTERM RELATIOSNHIP WITH YOU
+            •WHY MONEY IS SECONDARY? CAUSE IM IN THIS FOR THE PASION AND LOGTERM
+            RELATIOSNHIP WITH YOU
           </SmallText>
           <SmallText>
             • MY GOAL IS TO NEVER CHARGE YOU BEFORE THE PRODUCT IS DONE,BUT IF
-            THE PROJECT IS OVER 3 MONTHS, I WILL ASK FOR 50 000 SEK AS A
-            PAYDOWN, THIS WILL OF COURSE BE REDUCED FROM YOU FINAL PRICE.
+            THE PROJECT IS OVER 3 MONTHS, I WILL CHARGE A MONTHLY PAYMENT AFTER
+            YOU RECIEVD A UPDATE AND APPROVED THE PROJECTS SUCCESS, ALL MONTHLY
+            PAYMETS WILL OF COURSE BE REDUCED FROM YOU FINAL PRICE.
           </SmallText>
         </InnerInfoContainer>
-        <Text>• YOU NEVER PAY ANYTHING UNTIL YOU HAVE A PRODUCT </Text>
+        <Text>YOU NEVER PAY ANYTHING UNTIL YOU HAVE A PRODUCT </Text>
         <InnerInfoContainer>
           <SmallText>
             • MY GOAL IS TO HAVE YOU SATISFIED, AND I CANT POSSIBLE KNOW IF YOU
@@ -50,7 +58,7 @@ export const PricingView: FC = () => {
             COMPANIES DEVELOPING THEIR PRODUCT,AND CHARGING PRE DELIVERY.
           </SmallText>
         </InnerInfoContainer>
-        <Text>• WERE IN THIS TOGHETER, AND YOUR SATISFACTION IS MYGOAL</Text>
+        <Text>WERE IN THIS TOGHETER, AND YOUR SATISFACTION IS MYGOAL</Text>
         <InnerInfoContainer>
           <SmallText>
             • I RATHER SLEEP GOOD AND KEEP A GOOD REALTION WITH ALL THE PEOPLE I
@@ -62,6 +70,15 @@ export const PricingView: FC = () => {
           </SmallText>
         </InnerInfoContainer>
       </InfoContainer>
+      <CaluculatePriceContainerStyle>
+        <Button
+          onclick={handleClick}
+          text={!toogleCaluculatePrice ? "CALCULATE PRICE" : "CLOSE"}
+        />
+        {toogleCaluculatePrice && (
+          <CalculatePriceContainer setToogle={setToogleCalculatePrice} />
+        )}
+      </CaluculatePriceContainerStyle>
     </Container>
   );
 };

@@ -1,4 +1,6 @@
+import Link from "next/link";
 import styled from "styled-components";
+import { Theme } from "../../../../styles";
 
 export const Container = styled.div`
   display: flex;
@@ -19,5 +21,14 @@ export const TextContainer = styled.div`
   margin-top: 2rem;
   text-align: center;
   color: white;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  border: 0.05rem solid white;
 `;
 export const Text = styled.div``;
+
+export const LinkStyle = styled(Link)`
+  color: white;
+  tex-decoration: underline 0.05rem solid;
+`;

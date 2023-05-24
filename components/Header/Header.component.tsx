@@ -4,6 +4,7 @@ import { BurgerMenu } from "../../ui";
 
 import { TitleLetterByLetter } from "../../ui/feedback";
 import { Menu } from "../Menu";
+
 import { Container, TitleWrapper, LinkStyle } from "./Header.styles";
 
 export const Header: FC = () => {
@@ -12,6 +13,7 @@ export const Header: FC = () => {
   console.log(router.pathname);
   const [toogleMenu, setToogleMenu] = useState(false);
   const [toogleDropDownMenu, setToogleDropDownMenu] = useState(false);
+
   return (
     <Container suppressHydrationWarning={true}>
       {hideLogo ? null : (
