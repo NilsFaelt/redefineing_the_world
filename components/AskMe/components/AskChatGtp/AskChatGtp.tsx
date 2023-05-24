@@ -45,7 +45,7 @@ export const AskChatGtp = () => {
       });
     const answer = data.choices?.[0].message.content
       ? data.choices?.[0].message.content
-      : "PLEASE ASK AGAIN, MY EXPERTISE IS IN DEV";
+      : "PLEASE ASK AGAIN, MY EXPERTISE IS IN DEV AND TECH";
     setGtpAnswer(answer);
   };
 
