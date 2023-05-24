@@ -37,7 +37,7 @@ export const HomeView = () => {
           />
           <BlackTextInfoContainer>
             CREATES INNOVATIVE DESIGN AND SMART LOGIC TO COMBINE AND CREATE A
-            UNIQUE EXPERIENCE FOR YOU.
+            UNIQUE EXPERIENCE.
           </BlackTextInfoContainer>
         </TitleContainer>
       </BlackInfoContainer>
