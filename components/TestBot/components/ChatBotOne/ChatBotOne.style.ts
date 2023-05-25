@@ -58,12 +58,17 @@ export const Container = styled.div<ContainerProps>`
     left: 30%;
   }
   @media (max-width: 450px) {
-    left: 10%;
-
+    left: -55%;
+    top: -25%;
+    box-shadow: 0rem 0rem 0rem;
+    ${(props) =>
+      props.center === "true"
+        ? "box-shadow: 0rem 0rem 0rem;"
+        : "   box-shadow: 0.5rem 0.5rem 0.5rem black;"};
     ${(props) =>
       props.center === "true"
         ? " transform: translate(50%, 50%)"
-        : "  transform: translate(-0%, -50%)"};
+        : "  transform: translate(100%, 100%)"};
   }
   transform: translate(50%, 10%);
   display: flex;
