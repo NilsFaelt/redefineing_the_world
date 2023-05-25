@@ -1,7 +1,9 @@
 import React, { FC, ReactNode } from "react";
+import { CompanyGuideLines } from "../ChatBotInfo";
 import { Footer } from "../components/Footer/Footer.component";
 import { Header } from "../components/Header";
-import { Container } from "./MainLayout.style";
+import { ChatBotOne } from "../components/TestBot";
+
 type MainLayoutProps = {
   children: ReactNode;
 };
@@ -11,6 +13,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
     <div>
       <Header />
       {children}
+      <ChatBotOne companyGudlines={CompanyGuideLines} />
       <Footer />
     </div>
   );

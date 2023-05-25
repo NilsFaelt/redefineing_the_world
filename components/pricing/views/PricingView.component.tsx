@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import { Button } from "../../../ui/actions";
+import { TitleLetterByLetter } from "../../../ui/feedback";
 
 import { CalculatePriceContainer } from "../components";
 import {
@@ -17,7 +18,7 @@ export const PricingView: FC = () => {
   };
   return (
     <Container>
-      {/* <TitleLetterByLetter color='white' text='PRICING AND OUR WAY OF WORK' /> */}
+      <TitleLetterByLetter color='white' text='PRICING' />
       <InfoContainer>
         <Text>ALWAYS SET PRICES UNLESS YOU WANT IT SOME OTHER WAY</Text>
         <InnerInfoContainer>

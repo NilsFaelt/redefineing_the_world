@@ -95,8 +95,6 @@ export const HomeView = () => {
               THE HISTORY OF DESIGN AND PROGRAMMING IS ONE OF CONTINUOUS INNOVATION AND CHANGE. AS WE LOOK TO THE FUTURE, WE MUST CONTINUE TO EMBRACE NEW TECHNOLOGIES AND DESIGN APPROACHES THAT CAN HELP US TO BUILD A BETTER WORLD FOR ALL.'
         />
       </LongTextWrapper>
-
-      <ChatBotOne companyGudlines='test' />
     </Container>
   );
 };

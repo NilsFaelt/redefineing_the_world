@@ -40,7 +40,7 @@ const loadingAnimation = keyframes`
 
 export const Container = styled.div<ContainerProps>`
   position: fixed;
-  top: 50%;
+  top: 49%;
   left: 75%;
   @media (max-width: 1150px) {
     left: 65%;
@@ -82,6 +82,7 @@ export const Container = styled.div<ContainerProps>`
       ? " transform: translate(60%, 35%)"
       : "  transform: translate(-50%, -50%)"};
   transition: 1s;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
 `;
 export const InnerContainer = styled.div<InnerContainerProps>`
   z-index: ${(props) => props.zIndex};
@@ -173,6 +174,10 @@ export const ImageStyle = styled(Image)<ImageProps>`
   cursor: pointer;
   z-index: ${(props) => props.zIndex};
   opacity: ${(props) => props.opacity};
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  border-radius: 50%;
+  padding: 0.5rem;
 `;
 export const ImageStyleSmall = styled(Image)<ImageProps>`
   transition: 1s;

@@ -1,6 +1,8 @@
+import { useRouter } from "next/router";
 import React, { FC, useRef, useEffect } from "react";
 import { useState } from "react";
 import { BaseInput, Button } from "../../../../ui/actions";
+import { findWord } from "../utils";
 import { ChatBotAnswer } from "./ChatBotAnswer";
 import {
   Container,
@@ -21,16 +23,19 @@ interface DialogInfoType {
 export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   companyGudlines,
 }) => {
+  const router = useRouter();
   const [toggleChat, setToggleChat] = useState(false);
   const [loading, setLoading] = useState(false);
   const [question, setQuestion] = useState("");
+  const [botRecentAnswer, setBotRecentAnswer] = useState("");
   const [dialog, setDialog] = useState<DialogInfoType[]>([
     { type: "bot", message: "Hello my friend, how can i help you today?" },
   ]);
 
   const questionRules = {
     role: "system",
-    content: `you will be asked questions by a customer on a  company that specialize in${companyGudlines}, answer as if you were customer service at the company`,
+    content: `you will be asked questions by a customer on a  company that specialize in${companyGudlines}, answer as if you were customer service at the company. if someone ask you about prices: answer this word in the exact spelling: MagicRidePricingPage.
+    if someone ask you about contact: answer this word in the exact spelling: MagicRideContactPage`,
   };
   const asistant = {
     role: "assistant",
@@ -39,7 +44,16 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
 
   const inputRef = useRef<HTMLInputElement>(null);
   const textAreaRef = useRef<HTMLDivElement>(null);
-  console.log(dialog);
+
+  const foundWordPricingPage = findWord(
+    botRecentAnswer,
+    "MagicRidePricingPage"
+  );
+  const foundWordContactPage = findWord(
+    botRecentAnswer,
+    "MagicRideContactPage"
+  );
+
   useEffect(() => {
     inputRef.current?.focus();
     scrollToBottom();
@@ -77,9 +91,21 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     const answer = data.choices?.[0].message.content
       ? data.choices?.[0].message.content
       : "Please ask again i didnt understand";
-    setDialog((prev) => [...prev, { type: "bot", message: answer }]);
+    setDialog((prev) => [
+      ...prev,
+      { type: "bot", message: answer ? answer : "" },
+    ]);
+    setBotRecentAnswer(answer ? answer : "");
   };
 
+  useEffect(() => {
+    if (foundWordPricingPage) {
+      router.push("/pricing");
+    }
+    if (foundWordContactPage) {
+      router.push("/contact");
+    }
+  }, [foundWordPricingPage, foundWordContactPage]);
   return (
     <Container
       center={!toggleChat ? "true" : "false"}
