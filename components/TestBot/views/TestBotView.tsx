@@ -6,7 +6,19 @@ import { ChatBotOne } from "../components";
 import { Container, InputWrapper, InputLabel } from "./TestBotView.style";
 
 export const TestBotView: FC = () => {
-  const [companyInfo, setCompanyInfo] = useState("loving company");
+  const [companyName, setCompanyName] = useState("");
+  const [orientation, setOrientation] = useState("");
+  const [botName, setBotName] = useState("");
+  const [keywords, setKeywords] = useState("");
+  const companyInfo = `companyname: ${
+    companyName ? companyName : "Harrys Habadasherie"
+  }, what the company specializein: ${
+    orientation ? orientation : "Beans, greens and rock n roll"
+  }, call yourself ${
+    botName ? botName : "Dod Bylan"
+  }, keywords for the company you represent:${
+    keywords ? keywords : "love passion and lotr"
+  }`;
   console.log(companyInfo);
   return (
     <Container>
@@ -17,9 +29,31 @@ export const TestBotView: FC = () => {
           the robot.
         </InputLabel>
         <BaseInput
-          value={companyInfo}
+          placeholder='Company Name'
+          value={companyName}
           type='text'
-          onChange={setCompanyInfo}
+          onChange={setCompanyName}
+          color='white'
+        />
+        <BaseInput
+          placeholder='What do your company do'
+          value={orientation}
+          type='text'
+          onChange={setOrientation}
+          color='white'
+        />
+        <BaseInput
+          placeholder='Name on your bot'
+          value={botName}
+          type='text'
+          onChange={setBotName}
+          color='white'
+        />
+        <BaseInput
+          placeholder='Keywords'
+          value={keywords}
+          type='text'
+          onChange={setKeywords}
           color='white'
         />
       </InputWrapper>

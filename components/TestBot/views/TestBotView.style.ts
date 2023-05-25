@@ -22,6 +22,7 @@ export const InputLabel = styled.label`
 `;
 export const InputWrapper = styled.div`
   display: flex;
+  gap: 0.5rem;
   width: 25rem;
   flex-direction: column;
   align-items: center;

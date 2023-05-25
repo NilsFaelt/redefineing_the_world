@@ -11,6 +11,7 @@ export const Container = styled.div`
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
+  padding-bottom: 10rem;
 `;
 
 export const TextContainer = styled.div`
