@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React, { FC, useRef, useEffect } from "react";
 import { useState } from "react";
-import { BaseInput, Button } from "../../../../ui/actions";
-import { findWord } from "../utils";
+import { BaseInput, Button } from "../../ui/actions";
+import { findWord } from "../TestBot/components/utils";
 import { ChatBotAnswer } from "./ChatBotAnswer";
 import {
   Container,

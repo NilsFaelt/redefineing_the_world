@@ -41,34 +41,29 @@ const loadingAnimation = keyframes`
 export const Container = styled.div<ContainerProps>`
   position: fixed;
   top: 49%;
-  left: 75%;
-  @media (max-width: 1150px) {
+  left: 74%;
+  @media (max-width: 1250px) {
     left: 65%;
   }
   @media (max-width: 1000px) {
     left: 55%;
   }
   @media (max-width: 850px) {
-    left: 45%;
+    left: 50%;
   }
   @media (max-width: 700px) {
     left: 38%;
   }
   @media (max-width: 500px) {
-    left: 30%;
+    left: 28%;
   }
   @media (max-width: 450px) {
     left: -55%;
     top: -25%;
-    box-shadow: 0rem 0rem 0rem;
-    ${(props) =>
-      props.center === "true"
-        ? "box-shadow: 0rem 0rem 0rem;"
-        : "   box-shadow: 0.5rem 0.5rem 0.5rem black;"};
     ${(props) =>
       props.center === "true"
         ? " transform: translate(50%, 50%)"
-        : "  transform: translate(100%, 100%)"};
+        : "  transform: translate(100%, 65%)"};
   }
   transform: translate(50%, 10%);
   display: flex;
@@ -80,6 +75,11 @@ export const Container = styled.div<ContainerProps>`
   margin-bottom: 0rem;
   padding: 1rem;
   border-radius: 1rem;
+  box-shadow: 0rem 0rem 0rem;
+  ${(props) =>
+    props.center === "true"
+      ? "box-shadow: 0rem 0rem 0rem;"
+      : "   box-shadow: 0.5rem 0.5rem 0.5rem black;"};
   border: ${(props) => props.border} solid black;
   background-color: ${(props) => props.color};
   ${(props) =>
@@ -87,7 +87,6 @@ export const Container = styled.div<ContainerProps>`
       ? " transform: translate(60%, 35%)"
       : "  transform: translate(-50%, -50%)"};
   transition: 1s;
-  box-shadow: 0.5rem 0.5rem 0.5rem black;
 `;
 export const InnerContainer = styled.div<InnerContainerProps>`
   z-index: ${(props) => props.zindex};
