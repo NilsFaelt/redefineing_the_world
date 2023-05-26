@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";
-import { ToggleLandingContextProvider } from "../context /ToggleLandingContext";
+import { MainContextProvider } from "../context /MainLandingContext";
 import { GlobalStyles } from "../styles/GlobalStyles";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -8,11 +8,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
-      <ToggleLandingContextProvider>
+      <MainContextProvider>
         <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />
         </QueryClientProvider>
-      </ToggleLandingContextProvider>
+      </MainContextProvider>
     </>
   );
 }

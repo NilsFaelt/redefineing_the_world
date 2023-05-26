@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { FC, useRef, useEffect, useContext } from "react";
 import { useState } from "react";
-import { ToggleLandingContext } from "../../context /ToggleLandingContext";
+import { MainContext } from "../../context /MainLandingContext";
 import { BaseInput, Button } from "../../ui/actions";
 import { findWord } from "../TestBot/components/utils";
 import { ChatBotAnswer } from "./ChatBotAnswer";
@@ -16,16 +16,11 @@ import {
 } from "./ChatBotOne.style";
 import { UserAnswer } from "./UserAnswer";
 
-interface DialogInfoType {
-  type: "bot" | "user";
-  message: string;
-}
-
 export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   companyGudlines,
 }) => {
   const router = useRouter();
-  const { dialogInfo, setDialogInfo } = useContext(ToggleLandingContext);
+  const { dialogInfo, setDialogInfo } = useContext(MainContext);
   const [toggleChat, setToggleChat] = useState(false);
   const [loading, setLoading] = useState(false);
   const [question, setQuestion] = useState("");

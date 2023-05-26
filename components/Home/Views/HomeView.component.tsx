@@ -19,11 +19,11 @@ import {
 
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
-import { ToggleLandingContext } from "../../../context /ToggleLandingContext";
+import { MainContext } from "../../../context /MainLandingContext";
 import { ChatBotOne } from "../../TestBot";
 
 export const HomeView = () => {
-  const { toogleLanding, setToogleLanding } = useContext(ToggleLandingContext);
+  const { toogleLanding, setToogleLanding } = useContext(MainContext);
   const [toogleOpenChatMargin, setToogleOpenChatMargin] = useState(false);
   const [zIndex, setZIndex] = useState(0);
 

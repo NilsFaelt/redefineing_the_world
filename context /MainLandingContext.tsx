@@ -11,21 +11,21 @@ interface DialogInfoType {
   message: string;
 }
 
-export interface ToogleLandingContextValue {
+export interface MainContextContextValue {
   toogleLanding: boolean;
   setToogleLanding: Dispatch<SetStateAction<boolean>>;
   dialogInfo: DialogInfoType[];
   setDialogInfo: React.Dispatch<React.SetStateAction<DialogInfoType[]>>;
 }
 //test
-export const ToggleLandingContext = createContext<ToogleLandingContextValue>({
+export const MainContext = createContext<MainContextContextValue>({
   toogleLanding: false,
   setToogleLanding: () => {},
   dialogInfo: [],
   setDialogInfo: () => {},
 });
 
-export const ToggleLandingContextProvider: FC<{
+export const MainContextProvider: FC<{
   children: ReactNode;
 }> = ({ children }) => {
   const [dialogInfo, setDialogInfo] = useState<DialogInfoType[]>([
@@ -33,10 +33,10 @@ export const ToggleLandingContextProvider: FC<{
   ]);
   const [toogleLanding, setToogleLanding] = useState(true);
   return (
-    <ToggleLandingContext.Provider
+    <MainContext.Provider
       value={{ dialogInfo, toogleLanding, setToogleLanding, setDialogInfo }}
     >
       {children}
-    </ToggleLandingContext.Provider>
+    </MainContext.Provider>
   );
 };
