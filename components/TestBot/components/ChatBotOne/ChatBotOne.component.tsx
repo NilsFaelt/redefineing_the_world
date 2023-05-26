@@ -114,7 +114,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     >
       {!toggleChat && (
         <ImageStyle
-          zIndex={toggleChat ? -1 : 0}
+          zindex={toggleChat ? -1 : 0}
           opacity={toggleChat ? 0 : 1}
           onClick={() => {
             setToggleChat(!toggleChat);
@@ -125,17 +125,17 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
           height={100}
         />
       )}
-      <InnerContainer zIndex={toggleChat ? 0 : -1} opacity={toggleChat ? 1 : 0}>
+      <InnerContainer zindex={toggleChat ? 0 : -1} opacity={toggleChat ? 1 : 0}>
         <Close
           onClick={() => setToggleChat(!toggleChat)}
-          zIndex={toggleChat ? 0 : -1}
+          zindex={toggleChat ? 0 : -1}
           opacity={toggleChat ? 1 : 0}
         >
           Close
         </Close>
         <TextArea
           ref={textAreaRef}
-          zIndex={toggleChat ? 0 : -1}
+          zindex={toggleChat ? 0 : -1}
           opacity={toggleChat ? 1 : 0}
         >
           {dialog.map((each, i) => {

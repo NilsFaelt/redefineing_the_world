@@ -9,19 +9,19 @@ interface ContainerProps {
 }
 interface InnerContainerProps {
   opacity: number;
-  zIndex: number;
+  zindex: number;
 }
 interface ImageProps {
   opacity: number;
-  zIndex: number;
+  zindex: number;
 }
 interface TextAreaProps {
   opacity: number;
-  zIndex: number;
+  zindex: number;
 }
 interface CloseProps {
   opacity: number;
-  zIndex: number;
+  zindex: number;
 }
 interface ButtonWrapperProps {
   opacity: number;
@@ -90,7 +90,7 @@ export const Container = styled.div<ContainerProps>`
   box-shadow: 0.5rem 0.5rem 0.5rem black;
 `;
 export const InnerContainer = styled.div<InnerContainerProps>`
-  z-index: ${(props) => props.zIndex};
+  z-index: ${(props) => props.zindex};
   opacity: ${(props) => props.opacity};
 `;
 export const ChatContainer = styled.div`
@@ -105,7 +105,7 @@ export const TextArea = styled.div<TextAreaProps>`
   height: 15rem;
   background-color: white;
   border-radius: 1rem;
-  z-index: ${(props) => props.zIndex};
+  z-index: ${(props) => props.zindex};
   opacity: ${(props) => props.opacity};
   overflow: scroll;
 `;
@@ -165,7 +165,7 @@ export const Close = styled.text<CloseProps>`
   left: 0.2rem;
   top: -1.5rem;
   cursor: pointer;
-  z-index: ${(props) => props.zIndex};
+  z-index: ${(props) => props.zindex};
   opacity: ${(props) => props.opacity};
   font-size: 1rem;
 `;
@@ -177,7 +177,7 @@ export const ImageStyle = styled(Image)<ImageProps>`
   width: 5rem;
   height: 5rem;
   cursor: pointer;
-  z-index: ${(props) => props.zIndex};
+  z-index: ${(props) => props.zindex};
   opacity: ${(props) => props.opacity};
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0.5rem 0.5rem 0.5rem black;
@@ -193,6 +193,6 @@ export const ImageStyleSmall = styled(Image)<ImageProps>`
   margin-left: 0.2rem;
   background-color: black;
   border-radius: 50%;
-  z-index: ${(props) => props.zIndex};
+  z-index: ${(props) => props.zindex};
   opacity: ${(props) => props.opacity};
 `;

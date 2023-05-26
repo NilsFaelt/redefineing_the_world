@@ -17,7 +17,7 @@ export const ChatBotAnswer: FC<Props> = ({ toogleChat, text, loading }) => {
   return (
     <ChatTextAndBotContainer>
       <ImageStyleSmall
-        zIndex={!toogleChat ? -1 : 0}
+        zindex={!toogleChat ? -1 : 0}
         opacity={!toogleChat ? 0 : 1}
         alt='Image of robot'
         src='/png/robot.png'
