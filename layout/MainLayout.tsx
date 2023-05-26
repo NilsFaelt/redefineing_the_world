@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from "react";
-import { CompanyGuideLines } from "../chatBotInfo";
+import { CompanyGuideLines } from "../ChatBotInfo";
 import { Footer } from "../components/Footer/Footer.component";
 import { Header } from "../components/Header";
 import { ChatBotOne } from "../components/TestBot";
