@@ -19,7 +19,7 @@ export const TestBotView: FC = () => {
   }, keywords for the company you represent:${
     keywords ? keywords : "love passion and lotr"
   }`;
-  console.log(companyInfo);
+
   return (
     <Container>
       <InputWrapper>
