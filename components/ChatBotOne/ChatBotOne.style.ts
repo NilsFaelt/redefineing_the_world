@@ -76,6 +76,7 @@ export const Container = styled.div<ContainerProps>`
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0rem 0rem 0rem;
+  // border: 0.05rem solid black;
   ${(props) =>
     props.center === "true"
       ? "box-shadow: 0rem 0rem 0rem;"

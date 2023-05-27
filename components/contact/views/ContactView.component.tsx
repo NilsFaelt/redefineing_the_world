@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
+import { AddBanner } from "../../AddBanner";
 import { Container, Text, InfoTextContainer, LinkRef } from "./ContactView.css";
 
 export const ContactView: FC = () => {
@@ -11,6 +12,7 @@ export const ContactView: FC = () => {
         text='PLEASE MAIL OR CALL ME'
       />
       <Text>EMAIL: </Text>
+
       <LinkRef href={`mailto: nils.faelt@gmail.com`}>
         NILS:FAELT@GMAIL.COM
       </LinkRef>

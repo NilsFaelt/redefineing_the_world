@@ -14,13 +14,12 @@ import {
   SecondBlackTitle,
   Underline,
   LongTextWrapper,
-  ChatBotWrapper,
 } from "./HomeView.style";
 
 import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
 import { MainContext } from "../../../context /MainLandingContext";
-import { ChatBotOne } from "../../TestBot";
+import { AddBanner } from "../../AddBanner";
 
 export const HomeView = () => {
   const { toogleLanding, setToogleLanding } = useContext(MainContext);
@@ -86,6 +85,8 @@ export const HomeView = () => {
           <Underline />
         </RightBoxContainer>
       </InfoBoxContainer>
+
+      <AddBanner />
       <LongTextWrapper>
         <TitleLetterByLetter
           color='white'

@@ -7,22 +7,11 @@ interface Props {
   setToogleDropDownMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
-  const [linkText, setlinkText] = useState("");
-  const onHoover = (text: string) => {
-    setlinkText(text);
-  };
   return (
     <Container animate={toogleMenu ? "true" : "false"}>
-      {/* <Title animate={toogleMenu? 'true':'false'} >{linkText}</Title> */}
       <LinkStyledComponent
         onClick={() => {
           setToogleDropDownMenu(false);
-        }}
-        onMouseOver={() => {
-          onHoover("HOME");
-        }}
-        onMouseLeave={() => {
-          onHoover("");
         }}
         animate={toogleMenu ? "true" : "false"}
         href={"/"}
@@ -34,12 +23,6 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         onClick={() => {
           setToogleDropDownMenu(false);
         }}
-        onMouseOver={() => {
-          onHoover("CONTACT");
-        }}
-        onMouseLeave={() => {
-          onHoover("");
-        }}
         animate={toogleMenu ? "true" : "false"}
         href={"/contact"}
       >
@@ -49,41 +32,15 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         onClick={() => {
           setToogleDropDownMenu(false);
         }}
-        onMouseOver={() => {
-          onHoover("CONTACT");
-        }}
-        onMouseLeave={() => {
-          onHoover("");
-        }}
         animate={toogleMenu ? "true" : "false"}
         href={"/pricing"}
       >
         PRICING{" "}
       </LinkStyledComponent>
+
       <LinkStyledComponent
         onClick={() => {
           setToogleDropDownMenu(false);
-        }}
-        onMouseOver={() => {
-          onHoover("LIFE");
-        }}
-        onMouseLeave={() => {
-          onHoover("");
-        }}
-        animate={toogleMenu ? "true" : "false"}
-        href={"/ask-me"}
-      >
-        ASK ME
-      </LinkStyledComponent>
-      <LinkStyledComponent
-        onClick={() => {
-          setToogleDropDownMenu(false);
-        }}
-        onMouseOver={() => {
-          onHoover("LIFE");
-        }}
-        onMouseLeave={() => {
-          onHoover("");
         }}
         animate={toogleMenu ? "true" : "false"}
         href={"/test-bot"}
@@ -94,12 +51,6 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         onClick={() => {
           setToogleDropDownMenu(false);
         }}
-        onMouseOver={() => {
-          onHoover("CONTACT");
-        }}
-        onMouseLeave={() => {
-          onHoover("");
-        }}
         animate={toogleMenu ? "true" : "false"}
         href={"/connect-ai"}
       >
@@ -108,12 +59,6 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
       <LinkStyledComponent
         onClick={() => {
           setToogleDropDownMenu(false);
-        }}
-        onMouseOver={() => {
-          onHoover("LIFE");
-        }}
-        onMouseLeave={() => {
-          onHoover("");
         }}
         animate={toogleMenu ? "true" : "false"}
         href={"/your-project"}
