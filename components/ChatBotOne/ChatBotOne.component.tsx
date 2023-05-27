@@ -65,6 +65,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   };
 
   const handleClick = async (message: string, type: "bot" | "user") => {
+    if (!message) return null;
     setDialogInfo((prev) => [...prev, { message, type }]);
     setQuestion("");
     if (question === "") return null;
