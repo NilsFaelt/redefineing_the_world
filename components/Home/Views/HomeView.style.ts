@@ -128,24 +128,6 @@ export const WhiteInfoContainer = styled.div`
   }
 `;
 
-export const ParallaxContainer = styled.main`
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  position: relative;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  width: 100%;
-`;
-export const SmallParallaxContainer = styled.main`
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  margin-right: 7rem;
-  margin-top: 4rem;
-  margin-bottom: 3rem;
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
-`;
 export const Underline = styled.hr`
   bottom: 0rem;
   margin-right: 7rem;

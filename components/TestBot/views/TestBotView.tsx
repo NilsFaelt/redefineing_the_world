@@ -1,6 +1,5 @@
 import React, { FC, useState } from "react";
 import { BaseInput } from "../../../ui/actions";
-
 import { Header } from "../../Header";
 import { ChatBotOne } from "../components";
 import { Container, InputWrapper, InputLabel } from "./TestBotView.style";

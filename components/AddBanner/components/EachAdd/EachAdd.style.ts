@@ -40,11 +40,40 @@ const MinimizeContainerAnimation = keyframes`
   height: 8rem;
   }
 `;
+const ToogleInfoTextAnimationOpen = keyframes`
+  0% { 
+    opacity:0;
+  }
+  50% { 
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+`;
+const ToogleInfoTextAnimationClose = keyframes`
+  0% { 
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+`;
 
 export const Text = styled.p`
   color: white;
   transition: 1s;
 `;
+export const InfoText = styled.p<Props>`
+  color: white;
+  transition: 1s;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  animation: ${(props) =>
+      props.toogle ? ToogleInfoTextAnimationOpen : ToogleInfoTextAnimationClose}
+    1.5s forwards;
+`;
+
 export const Container = styled.div`
   position: relative;
   width: 100%;

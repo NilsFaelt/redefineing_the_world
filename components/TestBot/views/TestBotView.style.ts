@@ -6,12 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0rem;
-  padding-bottom: 25rem;
+  padding-bottom: 15rem;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: black;
-  @media (max-width: 600px) {
-  }
 `;
 export const InputLabel = styled.label`
   color: white;

@@ -9,4 +9,10 @@ export const Container = styled.div`
   width: 90%;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
