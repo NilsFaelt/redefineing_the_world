@@ -29,8 +29,10 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   const questionRules = {
     role: "system",
     content: `you will be asked questions by a customer on a  company that specialize in${companyGudlines}, answer as if you were customer service at the company. if someone ask you about prices: answer this word in the exact spelling: MagicRidePricingPage.
-    if someone ask you about contact: answer this word in the exact spelling: MagicRideContactPage`,
+    if someone ask you about contact: answer this word in the exact spelling: MagicRideContactPage.
+     `,
   };
+
   const asistant = {
     role: "assistant",
     content: "answer short and consist",
@@ -47,6 +49,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     botRecentAnswer,
     "MagicRideContactPage"
   );
+  const foundWordClose = findWord(botRecentAnswer, "MagicRideClose");
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -92,7 +95,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     ]);
     setBotRecentAnswer(answer ? answer : "");
   };
-
+  console.log(foundWordClose);
   useEffect(() => {
     if (foundWordPricingPage) {
       router.push("/pricing");
@@ -104,7 +107,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   return (
     <Container
       center={!toggleChat ? "true" : "false"}
-      color={toggleChat ? "white" : "none"}
+      color={toggleChat ? "rgba(255, 255, 255, 0.7)" : "rgba(255, 255, 255, 0)"}
       border={toggleChat ? "1px solid white" : "none"}
     >
       {!toggleChat && (

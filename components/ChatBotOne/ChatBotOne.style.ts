@@ -101,6 +101,7 @@ export const TextArea = styled.div<TextAreaProps>`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  margin-bottom: 0.5rem;
   width: 15.2rem;
   height: 15rem;
   background-color: white;
