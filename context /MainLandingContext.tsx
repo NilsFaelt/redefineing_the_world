@@ -37,7 +37,7 @@ export const MainContextProvider: FC<{
     { type: "bot", message: "Hello my friend, how can i help you today?" },
   ]);
   const [toogleLanding, setToogleLanding] = useState(true);
-  const [toogleChat, setToogleChat] = useState(true);
+  const [toogleChat, setToogleChat] = useState(false);
   return (
     <MainContext.Provider
       value={{
