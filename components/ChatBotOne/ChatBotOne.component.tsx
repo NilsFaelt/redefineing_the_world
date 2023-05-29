@@ -20,8 +20,9 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   companyGudlines,
 }) => {
   const router = useRouter();
-  const { dialogInfo, setDialogInfo } = useContext(MainContext);
-  const [toggleChat, setToggleChat] = useState(false);
+  const { dialogInfo, setDialogInfo, toogleChat, setToogleChat } =
+    useContext(MainContext);
+
   const [loading, setLoading] = useState(false);
   const [question, setQuestion] = useState("");
   const [botRecentAnswer, setBotRecentAnswer] = useState("");
@@ -49,12 +50,11 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     botRecentAnswer,
     "MagicRideContactPage"
   );
-  const foundWordClose = findWord(botRecentAnswer, "MagicRideClose");
 
   useEffect(() => {
     inputRef.current?.focus();
     scrollToBottom();
-  }, [toggleChat]);
+  }, [toogleChat]);
 
   useEffect(() => {
     scrollToBottom();
@@ -95,7 +95,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     ]);
     setBotRecentAnswer(answer ? answer : "");
   };
-  console.log(foundWordClose);
+
   useEffect(() => {
     if (foundWordPricingPage) {
       router.push("/pricing");
@@ -106,16 +106,16 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   }, [foundWordPricingPage, foundWordContactPage]);
   return (
     <Container
-      center={!toggleChat ? "true" : "false"}
-      color={toggleChat ? "rgba(255, 255, 255, 0.7)" : "rgba(255, 255, 255, 0)"}
-      border={toggleChat ? "1px solid white" : "none"}
+      center={!toogleChat ? "true" : "false"}
+      color={toogleChat ? "rgba(255, 255, 255, 0.7)" : "rgba(255, 255, 255, 0)"}
+      border={toogleChat ? "1px solid white" : "none"}
     >
-      {!toggleChat && (
+      {!toogleChat && (
         <ImageStyle
-          zindex={toggleChat ? -1 : 0}
-          opacity={toggleChat ? 0 : 1}
+          zindex={toogleChat ? -1 : 0}
+          opacity={toogleChat ? 0 : 1}
           onClick={() => {
-            setToggleChat(!toggleChat);
+            setToogleChat(!toogleChat);
           }}
           alt=''
           src='/png/robot.png'
@@ -123,18 +123,18 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
           height={100}
         />
       )}
-      <InnerContainer zindex={toggleChat ? 0 : -1} opacity={toggleChat ? 1 : 0}>
+      <InnerContainer zindex={toogleChat ? 0 : -1} opacity={toogleChat ? 1 : 0}>
         <Close
-          onClick={() => setToggleChat(!toggleChat)}
-          zindex={toggleChat ? 0 : -1}
-          opacity={toggleChat ? 1 : 0}
+          onClick={() => setToogleChat(!toogleChat)}
+          zindex={toogleChat ? 0 : -1}
+          opacity={toogleChat ? 1 : 0}
         >
           Close
         </Close>
         <TextArea
           ref={textAreaRef}
-          zindex={toggleChat ? 0 : -1}
-          opacity={toggleChat ? 1 : 0}
+          zindex={toogleChat ? 0 : -1}
+          opacity={toogleChat ? 1 : 0}
         >
           {dialogInfo.map((each, i) => {
             if (each.type === "user") {
@@ -143,7 +143,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
             return (
               <ChatBotAnswer
                 key={i}
-                toogleChat={toggleChat}
+                toogleChat={toogleChat}
                 text={each.message}
               />
             );
@@ -151,13 +151,13 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
           {loading && (
             <ChatBotAnswer
               loading={loading ? true : false}
-              toogleChat={toggleChat}
+              toogleChat={toogleChat}
               text=''
             />
           )}
         </TextArea>
         <Form>
-          {toggleChat && (
+          {toogleChat && (
             <BaseInput
               inputRef={inputRef}
               value={question}
@@ -167,7 +167,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
               color='white'
             />
           )}
-          <ButtonWrapper opacity={toggleChat ? 1 : 0}>
+          <ButtonWrapper opacity={toogleChat ? 1 : 0}>
             <Button
               onclick={(e) => {
                 e.preventDefault(), handleClick(question, "user");

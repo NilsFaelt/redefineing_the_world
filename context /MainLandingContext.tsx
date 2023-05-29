@@ -6,6 +6,7 @@ import React, {
   SetStateAction,
   useState,
 } from "react";
+import { boolean } from "zod";
 interface DialogInfoType {
   type: "bot" | "user";
   message: string;
@@ -16,6 +17,8 @@ export interface MainContextContextValue {
   setToogleLanding: Dispatch<SetStateAction<boolean>>;
   dialogInfo: DialogInfoType[];
   setDialogInfo: React.Dispatch<React.SetStateAction<DialogInfoType[]>>;
+  toogleChat: boolean;
+  setToogleChat: Dispatch<SetStateAction<boolean>>;
 }
 //test
 export const MainContext = createContext<MainContextContextValue>({
@@ -23,6 +26,8 @@ export const MainContext = createContext<MainContextContextValue>({
   setToogleLanding: () => {},
   dialogInfo: [],
   setDialogInfo: () => {},
+  toogleChat: false,
+  setToogleChat: () => {},
 });
 
 export const MainContextProvider: FC<{
@@ -32,9 +37,17 @@ export const MainContextProvider: FC<{
     { type: "bot", message: "Hello my friend, how can i help you today?" },
   ]);
   const [toogleLanding, setToogleLanding] = useState(true);
+  const [toogleChat, setToogleChat] = useState(true);
   return (
     <MainContext.Provider
-      value={{ dialogInfo, toogleLanding, setToogleLanding, setDialogInfo }}
+      value={{
+        toogleChat,
+        setToogleChat,
+        dialogInfo,
+        toogleLanding,
+        setToogleLanding,
+        setDialogInfo,
+      }}
     >
       {children}
     </MainContext.Provider>
