@@ -161,10 +161,14 @@ export const Form = styled.form`
 `;
 
 export const Close = styled.text<CloseProps>`
+  background-color: black;
   color: white;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+  border: 0.05rem solid white;
+  border-radius: 0.5rem;
   position: absolute;
-  left: 0.2rem;
-  top: -1.5rem;
+  right: 0.2rem;
+  top: -1.9rem;
   cursor: pointer;
   z-index: ${(props) => props.zindex};
   opacity: ${(props) => props.opacity};

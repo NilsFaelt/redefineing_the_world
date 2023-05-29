@@ -107,7 +107,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
   return (
     <Container
       center={!toogleChat ? "true" : "false"}
-      color={toogleChat ? "rgba(255, 255, 255, 0.7)" : "rgba(255, 255, 255, 0)"}
+      color={toogleChat ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0)"}
       border={toogleChat ? "1px solid white" : "none"}
     >
       {!toogleChat && (
