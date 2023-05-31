@@ -30,7 +30,7 @@ const index: NextPage = () => {
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://fangosolutions.com/test-bot' />
       </Head>
-      <TestBotView />;
+      <TestBotView />
     </>
   );
 };
