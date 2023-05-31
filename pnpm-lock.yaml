@@ -11,6 +11,7 @@ specifiers:
   eslint: 8.40.0
   eslint-config-next: 13.4.1
   next: 13.4.1
+  next-seo: ^6.0.0
   openai: ^3.2.1
   react: 18.2.0
   react-dom: 18.2.0
@@ -24,6 +25,7 @@ dependencies:
   axios: 1.4.0
   babel-plugin-styled-components: 2.1.1_styled-components@5.3.10
   next: 13.4.1_biqbaboplfbrettd7655fr4n2y
+  next-seo: 6.0.0_2xek2u27flvv5bywadnu4xxgx4
   openai: 3.2.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2047,6 +2049,18 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
+
+  /next-seo/6.0.0_2xek2u27flvv5bywadnu4xxgx4:
+    resolution: {integrity: sha512-jKKt1p1z4otMA28AyeoAONixVjdYmgFCWwpEFtu+DwRHQDllVX3RjtyXbuCQiUZEfQ9rFPBpAI90vDeLZlMBdg==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 13.4.1_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /next/13.4.1_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-JBw2kAIyhKDpjhEWvNVoFeIzNp9xNxg8wrthDOtMctfn3EpqGCmW0FSviNyGgOSOSn6zDaX48pmvbdf6X2W9xA==}

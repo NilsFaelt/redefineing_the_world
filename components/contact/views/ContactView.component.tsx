@@ -1,11 +1,12 @@
 import React, { FC } from "react";
 import { TitleLetterByLetter } from "../../../ui/feedback";
-import { AddBanner } from "../../AddBanner";
 import { Container, Text, InfoTextContainer, LinkRef } from "./ContactView.css";
+import { NextSeo } from "next-seo";
 
 export const ContactView: FC = () => {
   return (
     <Container>
+      <NextSeo title='Contact' description='Contact FangoSolutions' />
       <TitleLetterByLetter
         color='white'
         size='small'
