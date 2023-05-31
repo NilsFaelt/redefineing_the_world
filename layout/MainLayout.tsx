@@ -13,9 +13,6 @@ type MainLayoutProps = {
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
     <div>
-      <Head>
-        <Link rel='icon' href='/logo-favicon.png' type='image/png' />
-      </Head>
       <Header />
       {children}
       <ChatBotOne companyGudlines={CompanyGuideLines} />
