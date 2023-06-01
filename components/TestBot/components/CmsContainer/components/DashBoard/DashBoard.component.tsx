@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Container, TitleWrapper } from "./DashBoard.style";
-import { TitleLetterByLetter } from "../../../../../../ui/feedback";
+
 import { Button } from "../../../../../../ui/actions";
 export const DashBoard: FC = () => {
   return (
