@@ -43,15 +43,6 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
           setToogleDropDownMenu(false);
         }}
         animate={toogleMenu ? "true" : "false"}
-        href={"/test-bot"}
-      >
-        CHATBOT CMS (UNDER DEV)
-      </LinkStyledComponent>
-      <LinkStyledComponent
-        onClick={() => {
-          setToogleDropDownMenu(false);
-        }}
-        animate={toogleMenu ? "true" : "false"}
         href={"/connect-ai"}
       >
         CONNECT AI
