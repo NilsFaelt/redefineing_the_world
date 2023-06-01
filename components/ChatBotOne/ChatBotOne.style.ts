@@ -54,6 +54,7 @@ export const Container = styled.div<ContainerProps>`
   @media (max-width: 700px) {
     left: 38%;
   }
+
   @media (max-width: 500px) {
     left: 28%;
   }
@@ -76,7 +77,7 @@ export const Container = styled.div<ContainerProps>`
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0rem 0rem 0rem;
-  // border: 0.05rem solid black;
+
   ${(props) =>
     props.center === "true"
       ? "box-shadow: 0rem 0rem 0rem;"
@@ -92,6 +93,9 @@ export const Container = styled.div<ContainerProps>`
 export const InnerContainer = styled.div<InnerContainerProps>`
   z-index: ${(props) => props.zindex};
   opacity: ${(props) => props.opacity};
+  @media (max-width: 700px) {
+    width: 10%0rem;
+  }
 `;
 export const ChatContainer = styled.div`
   margin-top: 20rem;
