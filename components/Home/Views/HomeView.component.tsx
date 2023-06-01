@@ -23,8 +23,8 @@ import { AddBanner } from "../../AddBanner";
 
 export const HomeView = () => {
   const { toogleLanding, setToogleLanding } = useContext(MainContext);
-  const [toogleOpenChatMargin, setToogleOpenChatMargin] = useState(false);
   const [zIndex, setZIndex] = useState(0);
+  const [seeSpace, setSeeSpace] = useState(false);
 
   return (
     <Container>

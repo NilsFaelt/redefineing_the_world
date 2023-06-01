@@ -31,6 +31,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     role: "system",
     content: `you will be asked questions by a customer on a  company that specialize in${companyGudlines}, answer as if you were customer service at the company. if someone ask you about prices: answer this word in the exact spelling: MagicRidePricingPage.
     if someone ask you about contact: answer this word in the exact spelling: MagicRideContactPage.
+    if someone ask you  what is or what fango specialize in.
      `,
   };
 
