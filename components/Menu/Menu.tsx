@@ -45,7 +45,7 @@ export const Menu: FC<Props> = ({ toogleMenu, setToogleDropDownMenu }) => {
         animate={toogleMenu ? "true" : "false"}
         href={"/test-bot"}
       >
-        TEST CHAT BOT
+        CHATBOT CMS (UNDER DEV)
       </LinkStyledComponent>
       <LinkStyledComponent
         onClick={() => {

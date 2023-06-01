@@ -1,5 +1,16 @@
 import React, { FC } from "react";
-
+import { Container, TitleWrapper } from "./DashBoard.style";
+import { TitleLetterByLetter } from "../../../../../../ui/feedback";
+import { Button } from "../../../../../../ui/actions";
 export const DashBoard: FC = () => {
-  return <div>DashBoard</div>;
+  return (
+    <Container>
+      <TitleWrapper href={"/"}></TitleWrapper>
+      <Button onclick={() => {}} text='PERSONALIZE' />
+      <Button onclick={() => {}} text='PRICES' />
+      <Button onclick={() => {}} text='CONTEXT' />
+      <Button onclick={() => {}} text='CONTACT' />
+      <Button onclick={() => {}} text='Q AND A' />
+    </Container>
+  );
 };

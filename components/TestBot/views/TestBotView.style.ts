@@ -6,9 +6,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0rem;
-  width: 100%;
-
-  background-color: black;
+  width: 100vw;
+  background-color: white;
 `;
 export const InputLabel = styled.label`
   color: white;

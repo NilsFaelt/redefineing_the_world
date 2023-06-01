@@ -20,7 +20,6 @@ export const TestBotView: FC = () => {
 
   return (
     <Container>
-      <Header />
       <CmsContainer />
       <ChatBotOne companyGudlines={companyInfo} />
     </Container>
