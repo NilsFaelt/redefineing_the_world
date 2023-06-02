@@ -31,6 +31,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     role: "system",
     content: `you will be asked questions by a customer on a  company that specialize in${companyGudlines}, answer as if you were customer service at the company. if someone ask you about prices: answer this word in the exact spelling: MagicRidePricingPage.
     if someone ask you about contact: answer this word in the exact spelling: MagicRideContactPage.
+    if someone say exit leave or close  answer this word in the exact spelling: MagicRideClose.
     if someone ask you  what is or what fango specialize in.
      `,
   };
@@ -51,6 +52,7 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
     botRecentAnswer,
     "MagicRideContactPage"
   );
+  const foundWordClose = findWord(botRecentAnswer, "MagicRideClose");
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -105,6 +107,17 @@ export const ChatBotOne: FC<{ companyGudlines: string }> = ({
       router.push("/contact");
     }
   }, [foundWordPricingPage, foundWordContactPage]);
+  useEffect(() => {
+    if (foundWordPricingPage) {
+      router.push("/pricing");
+    }
+  }, [foundWordPricingPage, foundWordContactPage]);
+  useEffect(() => {
+    if (foundWordClose) {
+      setToogleChat(false);
+    }
+  }, [foundWordClose]);
+
   return (
     <Container
       center={!toogleChat ? "true" : "false"}

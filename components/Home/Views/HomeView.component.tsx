@@ -20,6 +20,8 @@ import { InfoText } from "../../AskMe/components/InfoText/InfoText.component";
 import { LandingTitleModal } from "../../LandingTitleModal/LandingTitleModal";
 import { MainContext } from "../../../context /MainLandingContext";
 import { AddBanner } from "../../AddBanner";
+import { Carousel } from "../../Carousel";
+import { Button } from "../../../ui/actions";
 
 export const HomeView = () => {
   const { toogleLanding, setToogleLanding } = useContext(MainContext);
@@ -40,8 +42,9 @@ export const HomeView = () => {
             CREATES INNOVATIVE DESIGN AND SMART LOGIC TO COMBINE AND CREATE A
             UNIQUE EXPERIENCE
           </BlackTextInfoContainer>
-        </TitleContainer>
+        </TitleContainer>{" "}
       </BlackInfoContainer>
+      {/* <Carousel /> */}
       <InfoBoxContainer>
         <LeftBoxContainer>
           <SecondBlackInfoContainer
